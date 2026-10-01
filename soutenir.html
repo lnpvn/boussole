@@ -137,84 +137,28 @@
   <section class="section">
     <div class="conteneur">
       <div class="section__entete">
-        <h2>Un financement diversifié</h2>
-        <p>Aucun financeur ne dépasse 40 % du budget du pilote.</p>
+        <h2>Le pilote en chiffres</h2>
       </div>
-      <div class="barres">
-        <div class="barre">
-          <p class="barre__legende"><span>Subvention État (poste adultes-relais)</span><span>39 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 39%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>Cité éducative</span><span>25 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 25%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>CAF</span><span>17 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 17%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>Mécénat d'entreprises</span><span>8 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 8%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>Mises à disposition des partenaires locaux</span><span>5 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 5%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>Fondations</span><span>3 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 3%"></span></div>
-        </div>
-        <div class="barre">
-          <p class="barre__legende"><span>Dons</span><span>3 %</span></p>
-          <div class="barre__piste" aria-hidden="true"><span class="barre__valeur" style="width: 3%"></span></div>
-        </div>
-      </div>
-
-      <h3>Trajectoire sur trois ans</h3>
-      <div class="tableau-enveloppe">
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">&nbsp;</th>
-              <th scope="col">Année 1</th>
-              <th scope="col">Année 2</th>
-              <th scope="col">Année 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Territoires couverts</th>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-            </tr>
-            <tr>
-              <th scope="row">Familles accompagnées</th>
-              <td>60</td>
-              <td>150</td>
-              <td>250</td>
-            </tr>
-            <tr>
-              <th scope="row">Budget</th>
-              <td>59 600 €</td>
-              <td>125 000 €</td>
-              <td>174 000 €</td>
-            </tr>
-            <tr>
-              <th scope="row">Coût par famille</th>
-              <td>993 €</td>
-              <td>833 €</td>
-              <td>696 €</td>
-            </tr>
-            <tr>
-              <th scope="row">Part des revenus propres</th>
-              <td>0 %</td>
-              <td>4 %</td>
-              <td>7 %</td>
-            </tr>
-          </tbody>
-        </table>
+      <ul class="grille">
+        <li class="carte">
+          <h3>12 mois</h3>
+          <p>À partir d'avril 2027, avec 60 familles accompagnées et deux ou trois écoles partenaires.</p>
+        </li>
+        <li class="carte">
+          <h3>59 600 €</h3>
+          <p>Budget prévisionnel du pilote, dont 77 % consacrés à l'humain.</p>
+        </li>
+        <li class="carte">
+          <h3>Un financement diversifié</h3>
+          <p>Recherché auprès de partenaires publics et privés.</p>
+        </li>
+        <li class="carte">
+          <h3>250 familles</h3>
+          <p>Notre ambition : les accompagner sur trois territoires en 2029.</p>
+        </li>
+      </ul>
+      <div class="action-centree">
+        <a class="bouton bouton--secondaire" href="?type=dossier#formulaire">Recevoir le dossier de présentation</a>
       </div>
     </div>
   </section>
@@ -277,6 +221,7 @@
           <label for="sout-type">Type de soutien</label>
           <select id="sout-type" name="type-soutien" required>
             <option value="" selected disabled>Choisissez un type de soutien</option>
+            <option value="dossier">Recevoir le dossier de présentation</option>
             <option value="mecenat">Mécénat</option>
             <option value="fondation">Fondation</option>
             <option value="collectivite">Collectivité</option>
