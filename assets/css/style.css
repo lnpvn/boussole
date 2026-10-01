@@ -458,6 +458,23 @@ strong {
   margin-bottom: 1rem;
 }
 
+.hero--centree {
+  text-align: center;
+}
+
+.hero--centree .conteneur {
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.hero--centree p {
+  margin-inline: auto;
+}
+
+.hero--centree .hero__actions {
+  justify-content: center;
+}
+
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
@@ -512,6 +529,28 @@ strong {
 .schema__fleche {
   font-size: 1.5rem;
   color: var(--color-accent);
+}
+
+/* --- Accroche (phrase mise en avant après une grille de cartes) --- */
+.accroche {
+  max-width: 38rem;
+  margin: 2.5rem auto 0;
+  padding: 1.75rem;
+  border-radius: var(--rayon-grand);
+  background-color: var(--color-bg);
+  box-shadow: var(--ombre);
+  text-align: center;
+  font-size: 1.15rem;
+}
+
+.accroche::before {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 3px;
+  margin: 0 auto 1rem;
+  background-color: var(--color-accent);
+  border-radius: var(--rayon-pilule);
 }
 
 .schema__legende {
