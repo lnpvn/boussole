@@ -389,6 +389,10 @@ strong {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 
+.grille + p {
+  margin-top: 1.5rem;
+}
+
 .carte {
   background-color: var(--color-bg);
   border: 1px solid var(--color-bordure);
