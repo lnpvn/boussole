@@ -521,16 +521,16 @@ strong {
   text-align: right;
 }
 
-/* --- Aperçu de l'application (cadre téléphone en HTML/CSS) --- */
+/* --- Aperçu de l'application (cadre téléphone en HTML/CSS, aucune image) --- */
 .apercu {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .apercu__telephone {
-  width: 15rem;
+  width: clamp(13rem, 60vw, 17rem);
   border: 3px solid var(--color-primaire);
   border-radius: 1.75rem;
   padding: 0.75rem;
@@ -550,50 +550,210 @@ strong {
 
 .apercu__ecran {
   background-color: var(--color-bg-doux);
-  border-radius: 1rem;
+  border-radius: 1.1rem;
   padding: 0.85rem;
 }
 
-.apercu__entete {
+/* Barre d'état (purement décorative) */
+.apercu__barre-etat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 700;
-  color: var(--color-primaire);
-  margin-bottom: 0.6rem;
+  color: var(--color-text-doux);
 }
 
+.apercu__signal {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 0.6rem;
+}
+
+.apercu__signal span {
+  width: 3px;
+  background-color: var(--color-text-doux);
+  border-radius: 1px;
+}
+
+.apercu__signal span:nth-child(1) { height: 40%; }
+.apercu__signal span:nth-child(2) { height: 60%; }
+.apercu__signal span:nth-child(3) { height: 80%; }
+.apercu__signal span:nth-child(4) { height: 100%; }
+
+.apercu__batterie {
+  width: 1.1rem;
+  height: 0.6rem;
+  border: 1px solid var(--color-text-doux);
+  border-radius: 2px;
+  padding: 1px;
+}
+
+.apercu__batterie span {
+  display: block;
+  width: 70%;
+  height: 100%;
+  background-color: var(--color-text-doux);
+  border-radius: 1px;
+}
+
+/* En-tête : avatar et espace de l'enfant */
+.apercu__profil {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.85rem;
+}
+
+.apercu__avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  font-weight: 700;
+}
+
+.apercu__nom {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-primaire);
+}
+
+.apercu__niveau {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--color-text-doux);
+}
+
+/* Cartes de contenu */
 .apercu__carte {
   background-color: var(--color-bg);
   border: 1px solid var(--color-bordure);
   border-radius: var(--rayon);
-  padding: 0.5rem 0.6rem;
-  font-size: 0.85rem;
+  padding: 0.55rem 0.65rem;
   margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.apercu__tag {
+  display: inline-block;
+  background-color: var(--color-bg-doux);
+  color: var(--color-accent);
+  border-radius: var(--rayon-pilule);
+  padding: 0.1rem 0.5rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.65rem;
+  font-weight: 700;
 }
 
 .apercu__recherche {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   background-color: var(--color-bg);
   border: 1px solid var(--color-bordure);
   border-radius: var(--rayon);
-  padding: 0.5rem 0.6rem;
-  font-size: 0.85rem;
-  margin-bottom: 0.6rem;
+  padding: 0.5rem 0.65rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.8rem;
   color: var(--color-text-doux);
 }
 
+.apercu__recherche strong {
+  color: var(--color-primaire);
+}
+
 .apercu__bouton {
+  display: block;
   width: 100%;
   background-color: var(--color-cta);
   color: var(--color-cta-texte);
   border: none;
-  border-radius: var(--rayon);
-  padding: 0.5rem;
+  border-radius: var(--rayon-pilule);
+  padding: 0.6rem;
+  margin-bottom: 0.75rem;
   font: inherit;
+  font-size: 0.85rem;
   font-weight: 700;
+}
+
+/* Barre d'onglets */
+.apercu__onglets {
+  display: flex;
+  justify-content: space-around;
+  border-top: 1px solid var(--color-bordure);
+  padding-top: 0.6rem;
+}
+
+.apercu__onglet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--color-text-doux);
+}
+
+.apercu__onglet::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-bordure);
+}
+
+.apercu__onglet--actif {
+  color: var(--color-accent);
+}
+
+.apercu__onglet--actif::before {
+  background-color: var(--color-accent);
 }
 
 .apercu__legende {
   font-size: 0.8rem;
   color: var(--color-text-doux);
   margin: 0;
+}
+
+.apercu__entete-ecran {
+  margin-bottom: 0.85rem;
+}
+
+/* --- Liste à puces colorées (avantages, engagements courts) --- */
+.liste-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.liste-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.liste-points li::before {
+  content: "";
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
 }
 
 /* --- Frise 2 à 18 ans --- */
@@ -659,6 +819,65 @@ strong {
 
 .etapes__item--cle .etapes__numero {
   background-color: var(--color-accent);
+}
+
+/* --- Barres de répartition (budget) --- */
+.barres {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.barre__legende {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.barre__piste {
+  background-color: var(--color-bg-doux);
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon-pilule);
+  height: 1rem;
+  overflow: hidden;
+}
+
+.barre__valeur {
+  display: block;
+  height: 100%;
+  background-color: var(--color-primaire);
+  border-radius: inherit;
+}
+
+/* --- Tableau --- */
+.tableau-enveloppe {
+  overflow-x: auto;
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon-grand);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 32rem;
+}
+
+th, td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-bordure);
+}
+
+thead th {
+  color: var(--color-primaire);
+  background-color: var(--color-bg-doux);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
 }
 
 /* --- Encadré urgence --- */

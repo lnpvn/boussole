@@ -58,14 +58,49 @@
 
 <main id="contenu">
   <section class="section hero">
-    <div class="conteneur">
-      <p class="badge">Gratuit pour les familles</p>
-      <h1>Boussole relie les parents et l'école pour accompagner chaque enfant, de 2 à 18 ans.</h1>
-      <p>Des réponses d'experts sans jargon pour les parents, un relais de confiance pour les écoles, et un référent humain qui fait le lien entre les deux.</p>
-      <div class="hero__actions">
-        <a class="bouton bouton--principal" href="parents.html">Je suis parent</a>
-        <a class="bouton bouton--secondaire" href="professionnels.html">Je suis un professionnel de l'école</a>
+    <div class="conteneur grille">
+      <div>
+        <p class="badge">Gratuit pour les familles</p>
+        <h1>Boussole relie les parents et l'école pour accompagner chaque enfant, de 2 à 18 ans.</h1>
+        <p>Des réponses d'experts sans jargon pour les parents, un relais de confiance pour les écoles, et un référent humain qui fait le lien entre les deux.</p>
+        <div class="hero__actions">
+          <a class="bouton bouton--principal" href="parents.html">Je suis parent</a>
+          <a class="bouton bouton--secondaire" href="professionnels.html">Je suis un professionnel de l'école</a>
+        </div>
       </div>
+      <div class="apercu" aria-hidden="true">
+        <div class="apercu__telephone">
+          <div class="apercu__ecran">
+            <div class="apercu__barre-etat">
+              <span>9:41</span>
+              <span class="apercu__signal"><span></span><span></span><span></span><span></span></span>
+              <span class="apercu__batterie"><span></span></span>
+            </div>
+            <div class="apercu__profil">
+              <span class="apercu__avatar">J</span>
+              <div>
+                <p class="apercu__nom">Jean</p>
+                <p class="apercu__niveau">CP</p>
+              </div>
+            </div>
+            <p class="apercu__carte"><span class="apercu__tag">Vidéo · 3 min</span><br>Fatigue et débuts de lecture</p>
+            <p class="apercu__carte"><span class="apercu__tag">Démarche</span><br>Inscription à la cantine</p>
+            <div class="apercu__recherche">
+              <span>Trouver de l'aide</span>
+              <strong>75019</strong>
+            </div>
+            <button class="apercu__bouton" type="button" tabindex="-1">Parler à un référent</button>
+            <nav class="apercu__onglets">
+              <span class="apercu__onglet apercu__onglet--actif">Accueil</span>
+              <span class="apercu__onglet">Démarches</span>
+              <span class="apercu__onglet">Aide</span>
+              <span class="apercu__onglet">Référent</span>
+            </nav>
+          </div>
+        </div>
+        <p class="apercu__legende">Aperçu du prototype</p>
+      </div>
+      <p class="sr-only">Aperçu de l'application : l'espace de l'enfant « Jean, CP » affiche une vidéo sur la fatigue et les débuts de lecture, une démarche d'inscription à la cantine, une recherche de lieux d'aide par code postal, un bouton pour parler à un référent, et une barre de navigation avec les onglets Accueil, Démarches, Aide et Référent.</p>
     </div>
   </section>
 
@@ -89,6 +124,51 @@
         </li>
       </ol>
       <p><strong>Quand le parent ne se rend pas compte d'une difficulté, c'est l'école qui la repère.</strong></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur grille">
+      <div>
+        <h2>Un avant-goût de l'application</h2>
+        <p>Boussole n'est pas encore ouvert, mais voici à quoi ressemblera votre espace : vos contenus, vos démarches et l'aide près de chez vous, réunis au même endroit.</p>
+        <ul class="liste-points">
+          <li>Un espace personnalisé pour chaque enfant</li>
+          <li>Toujours gratuit, sans jamais de publicité</li>
+          <li>Rien à installer depuis un store : un geste suffit pour l'ajouter à votre écran d'accueil</li>
+          <li>Disponible dans votre langue, en audio et en sous-titres</li>
+        </ul>
+        <div class="hero__actions">
+          <a class="bouton bouton--principal" href="parents.html#formulaire">Recevoir mon accès gratuitement</a>
+        </div>
+      </div>
+      <div class="apercu" aria-hidden="true">
+        <div class="apercu__telephone">
+          <div class="apercu__ecran">
+            <div class="apercu__barre-etat">
+              <span>9:41</span>
+              <span class="apercu__signal"><span></span><span></span><span></span><span></span></span>
+              <span class="apercu__batterie"><span></span></span>
+            </div>
+            <div class="apercu__entete-ecran">
+              <p class="apercu__nom">Trouver de l'aide</p>
+              <p class="apercu__niveau">Résultats près de 75019</p>
+            </div>
+            <p class="apercu__carte"><span class="apercu__tag">Médiathèque</span><br>À 800 m · Aide aux devoirs</p>
+            <p class="apercu__carte"><span class="apercu__tag">Association</span><br>À 1,2 km · Accompagnement des familles</p>
+            <p class="apercu__carte"><span class="apercu__tag">Centre social</span><br>À 1,5 km · Ateliers parents-enfants</p>
+            <button class="apercu__bouton" type="button" tabindex="-1">Voir tous les lieux d'aide</button>
+            <nav class="apercu__onglets">
+              <span class="apercu__onglet">Accueil</span>
+              <span class="apercu__onglet">Démarches</span>
+              <span class="apercu__onglet apercu__onglet--actif">Aide</span>
+              <span class="apercu__onglet">Référent</span>
+            </nav>
+          </div>
+        </div>
+        <p class="apercu__legende">Aperçu du prototype</p>
+      </div>
+      <p class="sr-only">Aperçu de l'application, écran « Trouver de l'aide » : une recherche de lieux d'aide près du code postal 75019 affiche une médiathèque à 800 mètres, une association à 1,2 kilomètre et un centre social à 1,5 kilomètre, avec un bouton pour voir tous les lieux d'aide et une barre de navigation avec les onglets Accueil, Démarches, Aide et Référent.</p>
     </div>
   </section>
 
