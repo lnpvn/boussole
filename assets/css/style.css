@@ -1150,8 +1150,14 @@ tbody tr:last-child td {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  padding-block: 2rem;
+  gap: 1.5rem;
+  padding-block: 2.75rem;
+}
+
+.pied__bloc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
 }
 
 .pied nav ul {
@@ -1167,6 +1173,19 @@ tbody tr:last-child td {
 
 .pied a:hover {
   color: var(--color-accent);
+}
+
+.pied__soutenir {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.pied__soutenir p {
+  margin: 0;
+  font-weight: 600;
+  color: var(--color-primaire);
 }
 
 /* --- 11. Mouvement réduit --- */
