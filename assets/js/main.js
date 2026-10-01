@@ -4,17 +4,6 @@
 (function () {
   "use strict";
 
-  /* --- Menu mobile --- */
-  var boutonMenu = document.querySelector(".bouton-menu");
-  var navPrincipale = document.querySelector(".nav-principale");
-
-  if (boutonMenu && navPrincipale) {
-    boutonMenu.addEventListener("click", function () {
-      var ouvert = navPrincipale.classList.toggle("est-ouverte");
-      boutonMenu.setAttribute("aria-expanded", ouvert ? "true" : "false");
-    });
-  }
-
   /* --- Bouton « Quitter le site » : remplace la page, sans retour arrière possible --- */
   var boutonSortie = document.querySelectorAll("[data-quitter-site]");
   var SITE_NEUTRE = "https://www.meteofrance.com";
