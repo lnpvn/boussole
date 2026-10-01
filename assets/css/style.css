@@ -598,10 +598,9 @@ strong {
 /* --- Schéma Parents / Référent / École --- */
 .schema {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.25rem;
   margin-bottom: 1.5rem;
 }
 
@@ -610,9 +609,9 @@ strong {
   border: 1px solid var(--color-bordure);
   border-radius: var(--rayon-grand);
   box-shadow: var(--ombre);
-  padding: 1rem 1.25rem;
+  padding: 1.5rem 1.25rem;
   text-align: center;
-  min-width: 10rem;
+  width: 12rem;
 }
 
 .schema__noeud p {
@@ -629,8 +628,31 @@ strong {
 }
 
 .schema__fleche {
-  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: var(--color-bg-doux);
   color: var(--color-accent);
+  font-size: 1.3rem;
+}
+
+@media (max-width: 36rem) {
+  .schema {
+    flex-direction: column;
+  }
+
+  .schema__noeud {
+    width: 100%;
+    max-width: 18rem;
+  }
+
+  .schema__fleche {
+    transform: rotate(90deg);
+  }
 }
 
 /* --- Accroche (citation mise en avant après une grille de cartes) --- */
