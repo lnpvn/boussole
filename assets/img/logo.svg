@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-label="Boussole">
+  <circle cx="24" cy="24" r="21" fill="none" stroke="#1B2E4B" stroke-width="3" />
+  <polygon points="24,10 29,24 24,22" fill="#C14A1E" />
+  <polygon points="24,38 19,24 24,26" fill="#1B2E4B" />
+  <circle cx="24" cy="24" r="2.5" fill="#1B2E4B" />
+</svg>

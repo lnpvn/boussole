@@ -1,0 +1,441 @@
+/* =========================================================
+   Boussole — feuille de style unique et partagée
+   Police système uniquement, pas de framework.
+   ========================================================= */
+
+/* --- 1. Réinitialisation simple --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body, h1, h2, h3, p, ul, ol, figure {
+  margin: 0;
+}
+
+ul[class], ol[class] {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- 2. Couleurs : mode clair par défaut, mode sombre automatique --- */
+:root {
+  --color-text: #2B3440;
+  --color-text-doux: #4C5A6B;
+  --color-bg: #FFFFFF;
+  --color-bg-doux: #EAF0F7;
+  --color-primaire: #1B2E4B;
+  --color-accent: #2F6B4B;
+  --color-cta: #C14A1E;
+  --color-cta-texte: #FFFFFF;
+  --color-bordure: #C9D6E3;
+  --color-focus: #1B2E4B;
+  --rayon: 0.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #E8EDF3;
+    --color-text-doux: #B7C4D4;
+    --color-bg: #10151C;
+    --color-bg-doux: #16212F;
+    --color-primaire: #AFCBEC;
+    --color-accent: #8FD1AC;
+    --color-cta: #E07A48;
+    --color-cta-texte: #10151C;
+    --color-bordure: #2B3A4A;
+    --color-focus: #AFCBEC;
+  }
+}
+
+/* --- 3. Base --- */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+h1, h2, h3 {
+  color: var(--color-primaire);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+h2 {
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 65ch;
+}
+
+a {
+  color: var(--color-primaire);
+}
+
+a:not([class]) {
+  text-decoration-thickness: from-font;
+}
+
+strong {
+  color: var(--color-primaire);
+}
+
+/* --- 4. Accessibilité : focus visible, lien d'évitement --- */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.lien-evitement {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  background: var(--color-primaire);
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--rayon);
+  z-index: 100;
+  transition: top 0.2s ease;
+}
+
+.lien-evitement:focus {
+  top: 1rem;
+}
+
+/* --- 5. Mise en page générale --- */
+.conteneur {
+  width: 100%;
+  max-width: 68rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.section {
+  padding-block: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.section--douce {
+  background-color: var(--color-bg-doux);
+}
+
+.section__entete {
+  max-width: 42rem;
+  margin-bottom: 2rem;
+}
+
+/* --- 6. En-tête et navigation --- */
+.entete {
+  border-bottom: 1px solid var(--color-bordure);
+}
+
+.entete__interieur {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1rem;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-primaire);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+}
+
+.logo svg {
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+}
+
+.bouton-menu {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon);
+  padding: 0.5rem 0.75rem;
+  min-height: 44px;
+  color: var(--color-primaire);
+  font: inherit;
+  cursor: pointer;
+}
+
+.nav-principale ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-principale a {
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.5rem 0.25rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-principale a:hover,
+.nav-principale a[aria-current="page"] {
+  color: var(--color-accent);
+}
+
+@media (max-width: 42rem) {
+  .bouton-menu {
+    display: inline-flex;
+  }
+
+  .nav-principale {
+    display: none;
+    width: 100%;
+  }
+
+  .nav-principale.est-ouverte {
+    display: block;
+  }
+
+  .nav-principale ul {
+    flex-direction: column;
+    gap: 0;
+    padding-block: 0.5rem 1rem;
+  }
+}
+
+/* --- 7. Boutons --- */
+.bouton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--rayon);
+  border: 2px solid transparent;
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.bouton--principal {
+  background-color: var(--color-cta);
+  color: var(--color-cta-texte);
+}
+
+.bouton--principal:hover {
+  transform: translateY(-1px);
+}
+
+.bouton--secondaire {
+  background-color: transparent;
+  border-color: var(--color-primaire);
+  color: var(--color-primaire);
+}
+
+.bouton--discret {
+  background-color: var(--color-bg-doux);
+  color: var(--color-primaire);
+  border-color: var(--color-bordure);
+}
+
+.bouton--sortie {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  border-color: var(--color-bordure);
+  font-size: 0.9rem;
+}
+
+/* --- 8. Cartes et grilles --- */
+.grille {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.carte {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon);
+  padding: 1.5rem;
+}
+
+.section--douce .carte {
+  background-color: var(--color-bg);
+}
+
+.badge {
+  display: inline-block;
+  background-color: var(--color-bg-doux);
+  color: var(--color-accent);
+  border: 1px solid var(--color-bordure);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.bandeau {
+  background-color: var(--color-bg-doux);
+  border-top: 1px solid var(--color-bordure);
+  border-bottom: 1px solid var(--color-bordure);
+  padding-block: 1rem;
+  text-align: center;
+}
+
+.bandeau p {
+  margin: 0 auto;
+}
+
+/* --- 9. Formulaires --- */
+.formulaire {
+  max-width: 32rem;
+}
+
+.champ {
+  margin-bottom: 1.25rem;
+}
+
+.champ label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.champ input,
+.champ select,
+.champ textarea {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.6rem 0.75rem;
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon);
+  font: inherit;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.champ textarea {
+  min-height: 7rem;
+}
+
+.champ--case {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.champ--case input {
+  width: 1.25rem;
+  height: 1.25rem;
+  min-height: 0;
+  margin-top: 0.2rem;
+}
+
+.champ__erreur {
+  color: var(--color-cta);
+  font-size: 0.9rem;
+  margin-top: 0.35rem;
+}
+
+.formulaire__confirmation {
+  border: 1px solid var(--color-accent);
+  background-color: var(--color-bg-doux);
+  border-radius: var(--rayon);
+  padding: 1.25rem;
+}
+
+/* --- 10. Pied de page --- */
+.pied {
+  border-top: 1px solid var(--color-bordure);
+  background-color: var(--color-bg-doux);
+}
+
+.pied__interieur {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+.pied nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.pied a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.pied a:hover {
+  color: var(--color-accent);
+}
+
+/* --- 11. Mouvement réduit --- */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* --- 12. Impression --- */
+@media print {
+  .entete, .pied, .nav-principale, .bouton-menu, .formulaire, .bouton--sortie {
+    display: none !important;
+  }
+
+  body {
+    color: #000;
+    background: #fff;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+  }
+}
