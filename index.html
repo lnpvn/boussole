@@ -15,10 +15,20 @@
   <div class="conteneur entete__interieur">
     <a class="logo" href="index.html">
       <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-        <circle cx="24" cy="24" r="21" fill="none" stroke="var(--color-primaire)" stroke-width="3" />
-        <polygon points="24,10 29,24 24,22" fill="var(--color-cta)" />
-        <polygon points="24,38 19,24 24,26" fill="var(--color-primaire)" />
-        <circle cx="24" cy="24" r="2.5" fill="var(--color-primaire)" />
+        <defs>
+          <clipPath id="boussole-cadre"><circle cx="24" cy="24" r="15" /></clipPath>
+        </defs>
+        <circle cx="24" cy="24" r="17" fill="none" stroke="var(--color-primaire)" stroke-width="2.5" />
+        <polygon points="24,1 28,8 24,13 20,8" fill="var(--color-primaire)" />
+        <polygon points="47,24 40,20 35,24 40,28" fill="var(--color-primaire)" />
+        <polygon points="24,47 28,40 24,35 20,40" fill="var(--color-primaire)" />
+        <polygon points="1,24 8,28 13,24 8,20" fill="var(--color-primaire)" />
+        <g clip-path="url(#boussole-cadre)">
+          <circle cx="24" cy="19" r="5" fill="var(--color-logo-soleil)" />
+          <path d="M6,40 Q16,24 24,32 L24,40 Z" fill="var(--color-accent)" fill-opacity="0.55" />
+          <path d="M24,40 L24,30 Q32,22 42,40 Z" fill="var(--color-accent)" />
+          <path d="M23,32 Q20,36 23,39" stroke="var(--color-primaire)" stroke-width="1.8" fill="none" stroke-linecap="round" />
+        </g>
       </svg>
       <span>Boussole</span>
     </a>
