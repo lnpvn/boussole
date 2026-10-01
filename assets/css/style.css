@@ -1061,19 +1061,6 @@ tbody tr:last-child td {
   border-bottom: none;
 }
 
-/* --- Encadré urgence --- */
-.encadre-urgence ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.encadre-urgence a {
-  font-weight: 700;
-  font-size: 1.1rem;
-}
-
 /* --- 9. Formulaires --- */
 .formulaire {
   max-width: 32rem;
