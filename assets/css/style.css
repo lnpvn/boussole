@@ -401,6 +401,28 @@ strong {
   background-color: var(--color-bg);
 }
 
+/* --- Carte "engagement" : icône dans un badge rond, texte centré --- */
+.carte--engagement {
+  text-align: center;
+}
+
+.icone-engagement {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background-color: var(--color-bg-doux);
+  color: var(--color-accent);
+}
+
+.icone-engagement svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
