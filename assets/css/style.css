@@ -460,19 +460,65 @@ strong {
 
 .hero--centree {
   text-align: center;
+  padding-block: clamp(3.5rem, 10vw, 7rem);
 }
 
 .hero--centree .conteneur {
-  max-width: 44rem;
+  max-width: 46rem;
   margin-inline: auto;
+}
+
+.hero--centree h1 {
+  font-size: clamp(2.1rem, 5.5vw, 3.25rem);
 }
 
 .hero--centree p {
   margin-inline: auto;
+  font-size: 1.15rem;
 }
 
 .hero--centree .hero__actions {
   justify-content: center;
+}
+
+/* Anneaux concentriques, centrés derrière le texte pour plus d'impact */
+.hero--centree::before,
+.hero--centree::after {
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+.hero--centree::before {
+  width: 32rem;
+  height: 32rem;
+  border-width: 3rem;
+}
+
+.hero--centree::after {
+  width: 19rem;
+  height: 19rem;
+  border-width: 1.75rem;
+  border-color: var(--color-accent);
+  opacity: 0.2;
+}
+
+@media (max-width: 30rem) {
+  .hero--centree::before {
+    width: 18rem;
+    height: 18rem;
+    border-width: 2rem;
+  }
+
+  .hero--centree::after {
+    display: block;
+    width: 10rem;
+    height: 10rem;
+    border-width: 1.25rem;
+  }
 }
 
 .hero__actions {
@@ -531,26 +577,33 @@ strong {
   color: var(--color-accent);
 }
 
-/* --- Accroche (phrase mise en avant après une grille de cartes) --- */
+/* --- Accroche (citation mise en avant après une grille de cartes) --- */
 .accroche {
-  max-width: 38rem;
+  position: relative;
+  max-width: 34rem;
   margin: 2.5rem auto 0;
-  padding: 1.75rem;
+  padding: 0.5rem 2rem 2rem;
   border-radius: var(--rayon-grand);
   background-color: var(--color-bg);
   box-shadow: var(--ombre);
   text-align: center;
-  font-size: 1.15rem;
 }
 
 .accroche::before {
-  content: "";
+  content: "“";
   display: block;
-  width: 3rem;
-  height: 3px;
-  margin: 0 auto 1rem;
-  background-color: var(--color-accent);
-  border-radius: var(--rayon-pilule);
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+}
+
+.accroche p {
+  margin: 0;
+  font-size: 1.25rem;
+  font-style: italic;
+  font-weight: 700;
+  color: var(--color-primaire);
 }
 
 .schema__legende {
