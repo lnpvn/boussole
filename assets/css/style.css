@@ -465,6 +465,17 @@ strong {
   margin-top: 1.5rem;
 }
 
+/* --- Page d'erreur 404 --- */
+.page-erreur {
+  text-align: center;
+}
+
+.page-erreur .hero__actions,
+.page-erreur p {
+  justify-content: center;
+  margin-inline: auto;
+}
+
 /* --- Schéma Parents / Référent / École --- */
 .schema {
   display: flex;
