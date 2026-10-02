@@ -88,25 +88,47 @@
             <p class="sr-only" id="demo-instructions">Ces quatre boutons affichent chacun un écran différent de la démonstration.</p>
 
             <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-accueil" aria-describedby="demo-instructions" checked>
-            <label class="apercu__onglet" for="ecran-accueil"><span>Accueil</span></label>
+            <label class="apercu__onglet" for="ecran-accueil">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 11.5 12 4l8 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 10v9h12v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Accueil</span>
+            </label>
 
             <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-demarches" aria-describedby="demo-instructions">
-            <label class="apercu__onglet" for="ecran-demarches"><span>Démarches</span></label>
+            <label class="apercu__onglet" for="ecran-demarches">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="5" y="4" width="14" height="17" rx="2" fill="none" stroke="currentColor" stroke-width="1.8" />
+                <path d="M8.5 9.3 10 10.8l3.5-3.5M8.5 15.3 10 16.8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Démarches</span>
+            </label>
 
             <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-partenaires" aria-describedby="demo-instructions">
-            <label class="apercu__onglet" for="ecran-partenaires"><span>Partenaires</span></label>
+            <label class="apercu__onglet" for="ecran-partenaires">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+                <circle cx="12" cy="9.5" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6" />
+              </svg>
+              <span class="sr-only">Partenaires</span>
+            </label>
 
             <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-referent" aria-describedby="demo-instructions">
-            <label class="apercu__onglet" for="ecran-referent"><span>Référent</span></label>
+            <label class="apercu__onglet" for="ecran-referent">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 5.5h16v10.5H10l-4.3 3.3v-3.3H4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Référent</span>
+            </label>
 
             <div class="apercu__contenu" id="contenu-accueil">
               <div class="apercu__entete-ecran">
                 <p class="apercu__nom">Bibliothèque</p>
-                <p class="apercu__niveau">Adaptée au niveau de Jean, CP</p>
+                <p class="apercu__niveau">Niveau CP</p>
               </div>
-              <p class="apercu__carte"><span class="apercu__tag">Podcast · 9 min</span><br>Bien vivre la rentrée en CP</p>
-              <p class="apercu__carte"><span class="apercu__tag">Vidéo · 4 min</span><br>Se faire des amis en classe</p>
-              <p class="apercu__carte"><span class="apercu__tag">Podcast · 11 min</span><br>Reconnaître la fatigue et le stress</p>
+              <p class="apercu__carte"><span class="apercu__tag">Podcast · 9 min</span><br>Bien vivre la rentrée</p>
+              <p class="apercu__carte"><span class="apercu__tag">Vidéo · 4 min</span><br>Se faire des amis</p>
             </div>
 
             <div class="apercu__contenu" id="contenu-demarches">
@@ -114,28 +136,27 @@
                 <p class="apercu__nom">Démarches</p>
                 <p class="apercu__niveau">Pour Jean, CP</p>
               </div>
-              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Inscription à la cantine</p>
-              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Aide de rentrée scolaire</p>
+              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Inscription cantine</p>
+              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Aide de rentrée</p>
               <button class="apercu__bouton" type="button" tabindex="-1">Voir la fiche</button>
             </div>
 
             <div class="apercu__contenu" id="contenu-partenaires">
               <div class="apercu__entete-ecran">
-                <p class="apercu__nom">Vos partenaires</p>
-                <p class="apercu__niveau">Résultats près de 75019</p>
+                <p class="apercu__nom">Partenaires</p>
+                <p class="apercu__niveau">Près de 75019</p>
               </div>
-              <p class="apercu__carte"><span class="apercu__tag">Médiathèque</span><br>À 800 m · Aide aux devoirs</p>
-              <p class="apercu__carte"><span class="apercu__tag">Association</span><br>À 1,2 km · Accompagnement des familles</p>
-              <p class="apercu__carte"><span class="apercu__tag">Centre social</span><br>À 1,5 km · Ateliers parents-enfants</p>
-              <button class="apercu__bouton" type="button" tabindex="-1">Voir tous les partenaires</button>
+              <p class="apercu__carte"><span class="apercu__tag">Médiathèque</span><br>À 800 m</p>
+              <p class="apercu__carte"><span class="apercu__tag">Association</span><br>À 1,2 km</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Voir tout</button>
             </div>
 
             <div class="apercu__contenu" id="contenu-referent">
               <div class="apercu__entete-ecran">
-                <p class="apercu__nom">Votre référent Boussole</p>
-                <p class="apercu__niveau">Réponse sous 2 jours ouvrés</p>
+                <p class="apercu__nom">Référent</p>
+                <p class="apercu__niveau">Sous 2 jours</p>
               </div>
-              <p class="apercu__carte">Posez une question ou demandez à être mis en relation avec une association près de chez vous.</p>
+              <p class="apercu__carte">Posez une question.</p>
               <button class="apercu__bouton" type="button" tabindex="-1">Écrire au référent</button>
             </div>
           </div>

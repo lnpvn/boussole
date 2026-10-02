@@ -919,19 +919,58 @@ strong {
   margin-bottom: 0.85rem;
 }
 
-/* --- Démo interactive : rapproche le téléphone du texte d'introduction --- */
+/* --- Démo interactive : rapproche le téléphone du texte d'introduction ---
+   overflow:visible laisse les anneaux décoratifs de .hero--centree se prolonger
+   sous le téléphone (recentrés plus bas et agrandis ci-dessous) au lieu de
+   rester confinés au-dessus, avec un fond transparent pour qu'ils se
+   prolongent visuellement derrière le téléphone sans bande blanche entre
+   les deux. */
 .hero--demo {
   padding-bottom: clamp(1rem, 3vw, 2rem);
+  overflow: visible;
+}
+
+.hero--demo::before,
+.hero--demo::after {
+  top: 100%;
+}
+
+.hero--demo::before {
+  width: 40rem;
+  height: 40rem;
+}
+
+.hero--demo::after {
+  width: 24rem;
+  height: 24rem;
+}
+
+@media (max-width: 30rem) {
+  .hero--demo::before {
+    width: 24rem;
+    height: 24rem;
+  }
+
+  .hero--demo::after {
+    width: 14rem;
+    height: 14rem;
+  }
 }
 
 .section--demo-telephone {
   padding-top: clamp(0.75rem, 2.5vw, 1.5rem);
+  background: none;
 }
 
-/* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) --- */
+/* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) ---
+   Taille et hauteur fixées en dur (pas seulement aspect-ratio) : avec des enfants en
+   grille/flex dont le contenu varie, aspect-ratio seul se laisse repousser par le
+   contenu le plus grand des 4 écrans. Une hauteur explicite + overflow:hidden
+   garantissent un cadre qui ne bouge jamais d'un onglet à l'autre. */
 .apercu--interactif .apercu__telephone {
-  width: clamp(13rem, 55vw, 15rem);
-  aspect-ratio: 9 / 16;
+  width: clamp(11rem, 44vw, 12.5rem);
+  height: clamp(28rem, 112vw, 32rem);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
@@ -973,10 +1012,13 @@ strong {
   cursor: pointer;
 }
 
-.apercu--interactif .apercu__onglet span {
-  display: block;
-  width: 100%;
-  overflow-wrap: break-word;
+.apercu--interactif .apercu__onglet::before {
+  display: none;
+}
+
+.apercu--interactif .apercu__onglet svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .apercu--interactif .apercu__onglet:nth-of-type(1) { grid-column: 1; }
@@ -1012,13 +1054,6 @@ strong {
 #ecran-partenaires:checked ~ .apercu__onglet[for="ecran-partenaires"],
 #ecran-referent:checked ~ .apercu__onglet[for="ecran-referent"] {
   color: var(--color-accent);
-}
-
-#ecran-accueil:checked ~ .apercu__onglet[for="ecran-accueil"]::before,
-#ecran-demarches:checked ~ .apercu__onglet[for="ecran-demarches"]::before,
-#ecran-partenaires:checked ~ .apercu__onglet[for="ecran-partenaires"]::before,
-#ecran-referent:checked ~ .apercu__onglet[for="ecran-referent"]::before {
-  background-color: var(--color-accent);
 }
 
 /* --- Liste à puces colorées (avantages, engagements courts) --- */
