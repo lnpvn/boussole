@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Découvrir l'espace professionnels — Boussole</title>
+  <meta name="description" content="Démonstration interactive du prototype Boussole : le guide des signaux d'alerte, la mise en relation avec l'accord des parents, et le suivi par le référent. Boussole n'est pas encore ouvert.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='21' fill='none' stroke='%231B2E4B' stroke-width='4'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23C14A1E'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete__interieur">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="boussole-cadre"><circle cx="24" cy="24" r="15" /></clipPath>
+        </defs>
+        <circle cx="24" cy="24" r="17" fill="none" stroke="var(--color-primaire)" stroke-width="2.5" />
+        <polygon points="24,1 28,8 24,13 20,8" fill="var(--color-primaire)" />
+        <polygon points="47,24 40,20 35,24 40,28" fill="var(--color-primaire)" />
+        <polygon points="24,47 28,40 24,35 20,40" fill="var(--color-primaire)" />
+        <polygon points="1,24 8,28 13,24 8,20" fill="var(--color-primaire)" />
+        <g clip-path="url(#boussole-cadre)">
+          <circle cx="24" cy="19" r="5" fill="var(--color-logo-soleil)" />
+          <path d="M6,40 Q16,24 24,32 L24,40 Z" fill="var(--color-accent)" fill-opacity="0.55" />
+          <path d="M24,40 L24,30 Q32,22 42,40 Z" fill="var(--color-accent)" />
+          <path d="M23,32 Q20,36 23,39" stroke="var(--color-primaire)" stroke-width="1.8" fill="none" stroke-linecap="round" />
+        </g>
+      </svg>
+      <span>Boussole</span>
+    </a>
+    <div class="entete__droite">
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="professionnels.html">Professionnels</a></li>
+        </ul>
+      </nav>
+      <!-- Sélecteur de langue : démonstration uniquement. Il montre l'intention de
+           traduire le site plus tard, mais ne traduit rien pour l'instant : seule
+           l'application Boussole sera réellement multilingue dès son lancement. -->
+      <details class="selecteur-langue">
+        <summary class="selecteur-langue__bouton">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" width="18" height="18">
+            <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 10h16M10 2c2.5 2.5 2.5 13 0 16M10 2c-2.5 2.5-2.5 13 0 16" fill="none" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <span>Français</span>
+        </summary>
+        <div class="selecteur-langue__panneau">
+          <ul class="selecteur-langue__liste">
+            <li><strong>Français</strong><span class="badge">Langue actuelle</span></li>
+            <li>English — anglais<span class="badge">Bientôt</span></li>
+            <li>العربية — arabe maghrébin<span class="badge">Bientôt</span></li>
+            <li>Bamanankan — bambara<span class="badge">Bientôt</span></li>
+          </ul>
+          <p class="selecteur-langue__note">Démonstration : la traduction du site n'est pas encore activée. L'application Boussole, elle, sera disponible en plusieurs langues dès son lancement.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="section hero hero--centree hero--demo">
+    <div class="conteneur">
+      <p class="badge">Aperçu du prototype</p>
+      <h1>Découvrez l'application Boussole pour les professionnels</h1>
+      <p>Boussole n'est pas encore ouvert. Voici une démonstration du prototype pour découvrir, dès maintenant, à quoi ressemblera l'espace professionnels. Cliquez sur les onglets de l'écran ci-dessous pour changer de page.</p>
+    </div>
+  </section>
+
+  <section class="section section--demo-telephone">
+    <div class="conteneur">
+      <div class="apercu apercu--interactif">
+        <div class="apercu__telephone">
+          <div class="apercu__ecran">
+            <div class="apercu__barre-etat" aria-hidden="true">
+              <span>9:41</span>
+              <span class="apercu__signal"><span></span><span></span><span></span><span></span></span>
+              <span class="apercu__batterie"><span></span></span>
+            </div>
+
+            <p class="sr-only" id="demo-instructions">Ces quatre boutons affichent chacun un écran différent de la démonstration.</p>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-accueil" aria-describedby="demo-instructions" checked>
+            <label class="apercu__onglet" for="ecran-accueil">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 11.5 12 4l8 7.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M6 10v9h12v-9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Accueil</span>
+            </label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-demarches" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-demarches">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 6c-2-1.5-4.5-2-7-1.5v13c2.5-.5 5 0 7 1.5c2-1.5 4.5-2 7-1.5v-13c-2.5-.5-5 0-7 1.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M12 6v13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              </svg>
+              <span class="sr-only">Signaux d'alerte</span>
+            </label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-partenaires" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-partenaires">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 19 19 5M19 5H9M19 5v10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Mise en relation</span>
+            </label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-referent" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-referent">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M4 5.5h16v10.5H10l-4.3 3.3v-3.3H4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" />
+              </svg>
+              <span class="sr-only">Référent</span>
+            </label>
+
+            <div class="apercu__contenu" id="contenu-accueil">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Espace professionnels</p>
+                <p class="apercu__niveau">Connecté comme professionnel</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">Astuce</span><br>Recommandez une vidéo à un parent</p>
+              <p class="apercu__carte"><span class="apercu__tag">Support</span><br>Présentez Boussole aux familles</p>
+              <p class="apercu__niveau">Les contenus parents sont consultables par tous, sans compte.</p>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-demarches">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Signaux d'alerte</p>
+                <p class="apercu__niveau">Un repère, pas un diagnostic</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">Signal</span><br>Absences répétées</p>
+              <p class="apercu__carte"><span class="apercu__tag">Signal</span><br>Isolement</p>
+              <p class="apercu__carte"><span class="apercu__tag">Signal</span><br>Changement de comportement</p>
+              <p class="apercu__niveau">Une raison d'en parler aux parents, jamais un diagnostic.</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Voir le guide</button>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-partenaires">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Mise en relation</p>
+                <p class="apercu__niveau">Toujours avec l'accord des parents</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">Seul champ</span><br>Ce qui vous a amené à proposer Boussole</p>
+              <p class="apercu__niveau">Aucune grille à cocher sur l'enfant.</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Envoyer la demande</button>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-referent">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Référent</p>
+                <p class="apercu__niveau">Sous 5 jours ouvrés</p>
+              </div>
+              <p class="apercu__carte">Le référent vous recontacte.</p>
+              <p class="apercu__carte">Un appel est organisé avec la famille.</p>
+              <p class="apercu__carte">Vous recevez un retour, avec l'accord des parents.</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Contacter le référent</button>
+            </div>
+          </div>
+        </div>
+        <p class="apercu__legende">Démo interactive du prototype — cliquez sur les onglets ci-dessus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Ce que vous retrouverez dans l'espace professionnels</h2>
+      </div>
+      <ul class="liste-points">
+        <li>Le formulaire de mise en relation, avec un seul champ court</li>
+        <li>Le guide des signaux d'alerte, à portée de main</li>
+        <li>Des supports pour présenter Boussole aux familles</li>
+        <li>Un référent qui organise la suite, toujours avec l'accord des parents</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="bouton bouton--principal" href="professionnels.html#formulaire">Devenir école partenaire du pilote</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="bandeau">
+    <p class="conteneur"><strong>Projet en préparation.</strong> Le pilote démarre à partir d'avril 2027, dans un quartier prioritaire d'Île-de-France.</p>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied__interieur">
+    <div class="pied__bloc">
+      <p>Boussole — Prévenir aujourd'hui pour demain.</p>
+      <nav aria-label="Pied de page">
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="mailto:[À COMPLÉTER]">Contact</a></li> <!-- À COMPLÉTER : adresse e-mail officielle de l'association -->
+        </ul>
+      </nav>
+    </div>
+    <div class="pied__soutenir">
+      <p>Envie de soutenir le projet ?</p>
+      <a class="bouton bouton--secondaire" href="soutenir.html">Nous soutenir</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
