@@ -921,6 +921,7 @@ strong {
 
 /* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) --- */
 .apercu--interactif .apercu__telephone {
+  width: clamp(9.5rem, 40vw, 12rem);
   aspect-ratio: 9 / 19.5;
   display: flex;
   flex-direction: column;
