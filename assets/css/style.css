@@ -919,6 +919,76 @@ strong {
   margin-bottom: 0.85rem;
 }
 
+/* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) --- */
+.apercu--interactif .apercu__ecran {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto 1fr;
+  row-gap: 0.6rem;
+}
+
+.apercu--interactif .apercu__barre-etat {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.apercu__radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.apercu--interactif .apercu__onglet {
+  grid-row: 2;
+  min-height: 44px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.apercu--interactif .apercu__onglet:nth-of-type(1) { grid-column: 1; }
+.apercu--interactif .apercu__onglet:nth-of-type(2) { grid-column: 2; }
+.apercu--interactif .apercu__onglet:nth-of-type(3) { grid-column: 3; }
+.apercu--interactif .apercu__onglet:nth-of-type(4) { grid-column: 4; }
+
+.apercu__radio:focus-visible + .apercu__onglet {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: var(--rayon);
+}
+
+.apercu--interactif .apercu__contenu {
+  display: none;
+  grid-column: 1 / -1;
+  grid-row: 3;
+}
+
+#ecran-accueil:checked ~ #contenu-accueil,
+#ecran-demarches:checked ~ #contenu-demarches,
+#ecran-partenaires:checked ~ #contenu-partenaires,
+#ecran-referent:checked ~ #contenu-referent {
+  display: block;
+}
+
+#ecran-accueil:checked ~ .apercu__onglet[for="ecran-accueil"],
+#ecran-demarches:checked ~ .apercu__onglet[for="ecran-demarches"],
+#ecran-partenaires:checked ~ .apercu__onglet[for="ecran-partenaires"],
+#ecran-referent:checked ~ .apercu__onglet[for="ecran-referent"] {
+  color: var(--color-accent);
+}
+
+#ecran-accueil:checked ~ .apercu__onglet[for="ecran-accueil"]::before,
+#ecran-demarches:checked ~ .apercu__onglet[for="ecran-demarches"]::before,
+#ecran-partenaires:checked ~ .apercu__onglet[for="ecran-partenaires"]::before,
+#ecran-referent:checked ~ .apercu__onglet[for="ecran-referent"]::before {
+  background-color: var(--color-accent);
+}
+
 /* --- Liste à puces colorées (avantages, engagements courts) --- */
 .liste-points {
   display: flex;

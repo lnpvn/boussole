@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Découvrir l'application — Boussole</title>
+  <meta name="description" content="Démonstration interactive du prototype Boussole : explorez la bibliothèque de contenus, les démarches, les partenaires près de chez vous et le référent. Boussole n'est pas encore ouvert.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='21' fill='none' stroke='%231B2E4B' stroke-width='4'/%3E%3Ccircle cx='24' cy='24' r='4' fill='%23C14A1E'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete__interieur">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="boussole-cadre"><circle cx="24" cy="24" r="15" /></clipPath>
+        </defs>
+        <circle cx="24" cy="24" r="17" fill="none" stroke="var(--color-primaire)" stroke-width="2.5" />
+        <polygon points="24,1 28,8 24,13 20,8" fill="var(--color-primaire)" />
+        <polygon points="47,24 40,20 35,24 40,28" fill="var(--color-primaire)" />
+        <polygon points="24,47 28,40 24,35 20,40" fill="var(--color-primaire)" />
+        <polygon points="1,24 8,28 13,24 8,20" fill="var(--color-primaire)" />
+        <g clip-path="url(#boussole-cadre)">
+          <circle cx="24" cy="19" r="5" fill="var(--color-logo-soleil)" />
+          <path d="M6,40 Q16,24 24,32 L24,40 Z" fill="var(--color-accent)" fill-opacity="0.55" />
+          <path d="M24,40 L24,30 Q32,22 42,40 Z" fill="var(--color-accent)" />
+          <path d="M23,32 Q20,36 23,39" stroke="var(--color-primaire)" stroke-width="1.8" fill="none" stroke-linecap="round" />
+        </g>
+      </svg>
+      <span>Boussole</span>
+    </a>
+    <div class="entete__droite">
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="professionnels.html">Professionnels</a></li>
+        </ul>
+      </nav>
+      <!-- Sélecteur de langue : démonstration uniquement. Il montre l'intention de
+           traduire le site plus tard, mais ne traduit rien pour l'instant : seule
+           l'application Boussole sera réellement multilingue dès son lancement. -->
+      <details class="selecteur-langue">
+        <summary class="selecteur-langue__bouton">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" width="18" height="18">
+            <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 10h16M10 2c2.5 2.5 2.5 13 0 16M10 2c-2.5 2.5-2.5 13 0 16" fill="none" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <span>Français</span>
+        </summary>
+        <div class="selecteur-langue__panneau">
+          <ul class="selecteur-langue__liste">
+            <li><strong>Français</strong><span class="badge">Langue actuelle</span></li>
+            <li>English — anglais<span class="badge">Bientôt</span></li>
+            <li>العربية — arabe maghrébin<span class="badge">Bientôt</span></li>
+            <li>Bamanankan — bambara<span class="badge">Bientôt</span></li>
+          </ul>
+          <p class="selecteur-langue__note">Démonstration : la traduction du site n'est pas encore activée. L'application Boussole, elle, sera disponible en plusieurs langues dès son lancement.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="section hero hero--centree">
+    <div class="conteneur">
+      <p class="badge">Aperçu du prototype</p>
+      <h1>Découvrez l'application Boussole</h1>
+      <p>Boussole n'est pas encore ouvert. Voici une démonstration du prototype pour découvrir, dès maintenant, à quoi ressemblera votre espace. Cliquez sur les onglets de l'écran ci-dessous pour changer de page.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="apercu apercu--interactif">
+        <div class="apercu__telephone">
+          <div class="apercu__ecran">
+            <div class="apercu__barre-etat" aria-hidden="true">
+              <span>9:41</span>
+              <span class="apercu__signal"><span></span><span></span><span></span><span></span></span>
+              <span class="apercu__batterie"><span></span></span>
+            </div>
+
+            <p class="sr-only" id="demo-instructions">Ces quatre boutons affichent chacun un écran différent de la démonstration.</p>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-accueil" aria-describedby="demo-instructions" checked>
+            <label class="apercu__onglet" for="ecran-accueil">Accueil</label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-demarches" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-demarches">Démarches</label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-partenaires" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-partenaires">Partenaires</label>
+
+            <input class="apercu__radio" type="radio" name="ecran-demo" id="ecran-referent" aria-describedby="demo-instructions">
+            <label class="apercu__onglet" for="ecran-referent">Référent</label>
+
+            <div class="apercu__contenu" id="contenu-accueil">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Bibliothèque</p>
+                <p class="apercu__niveau">Adaptée au niveau de Jean, CP</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">Podcast · 9 min</span><br>Bien vivre la rentrée en CP</p>
+              <p class="apercu__carte"><span class="apercu__tag">Vidéo · 4 min</span><br>Se faire des amis en classe</p>
+              <p class="apercu__carte"><span class="apercu__tag">Podcast · 11 min</span><br>Reconnaître la fatigue et le stress</p>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-demarches">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Démarches</p>
+                <p class="apercu__niveau">Pour Jean, CP</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Inscription à la cantine</p>
+              <p class="apercu__carte"><span class="apercu__tag">À faire</span><br>Aide de rentrée scolaire</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Voir la fiche</button>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-partenaires">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Vos partenaires</p>
+                <p class="apercu__niveau">Résultats près de 75019</p>
+              </div>
+              <p class="apercu__carte"><span class="apercu__tag">Médiathèque</span><br>À 800 m · Aide aux devoirs</p>
+              <p class="apercu__carte"><span class="apercu__tag">Association</span><br>À 1,2 km · Accompagnement des familles</p>
+              <p class="apercu__carte"><span class="apercu__tag">Centre social</span><br>À 1,5 km · Ateliers parents-enfants</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Voir tous les partenaires</button>
+            </div>
+
+            <div class="apercu__contenu" id="contenu-referent">
+              <div class="apercu__entete-ecran">
+                <p class="apercu__nom">Votre référent Boussole</p>
+                <p class="apercu__niveau">Réponse sous 5 jours ouvrés</p>
+              </div>
+              <p class="apercu__carte">Posez une question ou demandez à être mis en relation avec une association près de chez vous.</p>
+              <button class="apercu__bouton" type="button" tabindex="-1">Écrire au référent</button>
+            </div>
+          </div>
+        </div>
+        <p class="apercu__legende">Démo interactive du prototype — cliquez sur les onglets ci-dessus.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Ce que vous retrouverez dans votre espace</h2>
+      </div>
+      <ul class="liste-points">
+        <li>Une bibliothèque de vidéos et de podcasts d'experts, adaptée au niveau de chaque enfant</li>
+        <li>Les démarches de l'année expliquées simplement, avec le lien vers la ressource officielle</li>
+        <li>De l'aide près de chez vous, grâce à votre code postal</li>
+        <li>Un référent à qui parler, pour poser une question ou être mis en relation avec une association</li>
+      </ul>
+      <div class="hero__actions">
+        <a class="bouton bouton--principal" href="parents.html#formulaire">Recevoir mon accès gratuitement</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="bandeau">
+    <p class="conteneur"><strong>Projet en préparation.</strong> Le pilote démarre à partir d'avril 2027, dans un quartier prioritaire d'Île-de-France.</p>
+  </div>
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied__interieur">
+    <div class="pied__bloc">
+      <p>Boussole — Prévenir aujourd'hui pour demain.</p>
+      <nav aria-label="Pied de page">
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="mailto:[À COMPLÉTER]">Contact</a></li> <!-- À COMPLÉTER : adresse e-mail officielle de l'association -->
+        </ul>
+      </nav>
+    </div>
+    <div class="pied__soutenir">
+      <p>Envie de soutenir le projet ?</p>
+      <a class="bouton bouton--secondaire" href="soutenir.html">Nous soutenir</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
