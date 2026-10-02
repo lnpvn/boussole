@@ -972,12 +972,34 @@ strong {
    cadre garantissent une taille qui ne bouge jamais d'un onglet à l'autre ;
    le contenu qui ne tient pas défile à l'intérieur de l'écran, comme sur un
    vrai téléphone. */
-.apercu--interactif .apercu__telephone {
+/* --- Format d'un iPhone 14 réel (ratio 390:844 points), réutilisable sur tout
+   aperçu d'application (démo interactive ou aperçu statique) --- */
+.apercu--iphone14 .apercu__telephone {
   width: clamp(13rem, 50vw, 16rem);
   height: clamp(28rem, 108vw, 34.5rem);
   overflow: hidden;
   display: flex;
   flex-direction: column;
+}
+
+.apercu--iphone14 .apercu__ecran {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.apercu--iphone14 .apercu__onglets {
+  margin-top: auto;
+}
+
+.apercu--iphone14 .apercu__onglet::before {
+  display: none;
+}
+
+.apercu--iphone14 .apercu__onglet svg {
+  width: 1.4rem;
+  height: 1.4rem;
 }
 
 .apercu--interactif .apercu__ecran {
@@ -1015,15 +1037,6 @@ strong {
   justify-content: center;
   text-align: center;
   cursor: pointer;
-}
-
-.apercu--interactif .apercu__onglet::before {
-  display: none;
-}
-
-.apercu--interactif .apercu__onglet svg {
-  width: 1.4rem;
-  height: 1.4rem;
 }
 
 .apercu--interactif .apercu__onglet:nth-of-type(1) { grid-column: 1; }
