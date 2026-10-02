@@ -919,6 +919,15 @@ strong {
   margin-bottom: 0.85rem;
 }
 
+/* --- Démo interactive : rapproche le téléphone du texte d'introduction --- */
+.hero--demo {
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.section--demo-telephone {
+  padding-top: clamp(0.75rem, 2.5vw, 1.5rem);
+}
+
 /* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) --- */
 .apercu--interactif .apercu__telephone {
   width: clamp(9.5rem, 40vw, 12rem);
