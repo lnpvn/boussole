@@ -930,8 +930,8 @@ strong {
 
 /* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) --- */
 .apercu--interactif .apercu__telephone {
-  width: clamp(9.5rem, 40vw, 12rem);
-  aspect-ratio: 9 / 19.5;
+  width: clamp(13rem, 55vw, 15rem);
+  aspect-ratio: 9 / 16;
   display: flex;
   flex-direction: column;
 }
@@ -939,7 +939,7 @@ strong {
 .apercu--interactif .apercu__ecran {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto auto 1fr;
+  grid-template-rows: auto 1fr auto;
   row-gap: 0.6rem;
   flex: 1;
   min-height: 0;
@@ -948,6 +948,7 @@ strong {
 .apercu--interactif .apercu__barre-etat {
   grid-column: 1 / -1;
   grid-row: 1;
+  min-width: 0;
 }
 
 .apercu__radio {
@@ -963,10 +964,19 @@ strong {
 }
 
 .apercu--interactif .apercu__onglet {
-  grid-row: 2;
+  grid-row: 3;
+  width: 100%;
+  min-width: 0;
   min-height: 44px;
   justify-content: center;
+  text-align: center;
   cursor: pointer;
+}
+
+.apercu--interactif .apercu__onglet span {
+  display: block;
+  width: 100%;
+  overflow-wrap: break-word;
 }
 
 .apercu--interactif .apercu__onglet:nth-of-type(1) { grid-column: 1; }
@@ -983,9 +993,11 @@ strong {
 .apercu--interactif .apercu__contenu {
   display: none;
   grid-column: 1 / -1;
-  grid-row: 3;
+  grid-row: 2;
   min-height: 0;
+  min-width: 0;
   overflow-y: auto;
+  overflow-wrap: break-word;
 }
 
 #ecran-accueil:checked ~ #contenu-accueil,
