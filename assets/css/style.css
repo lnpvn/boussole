@@ -963,13 +963,16 @@ strong {
 }
 
 /* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) ---
-   Taille et hauteur fixées en dur (pas seulement aspect-ratio) : avec des enfants en
-   grille/flex dont le contenu varie, aspect-ratio seul se laisse repousser par le
-   contenu le plus grand des 4 écrans. Une hauteur explicite + overflow:hidden
-   garantissent un cadre qui ne bouge jamais d'un onglet à l'autre. */
+   Format d'un iPhone 14 réel (ratio 390:844 points). Taille et hauteur fixées
+   en dur (pas seulement aspect-ratio) : avec des enfants en grille/flex dont
+   le contenu varie, aspect-ratio seul se laisse repousser par le contenu le
+   plus grand des 4 écrans. Une hauteur explicite + overflow:hidden sur le
+   cadre garantissent une taille qui ne bouge jamais d'un onglet à l'autre ;
+   le contenu qui ne tient pas défile à l'intérieur de l'écran, comme sur un
+   vrai téléphone. */
 .apercu--interactif .apercu__telephone {
-  width: clamp(11rem, 44vw, 12.5rem);
-  height: clamp(28rem, 112vw, 32rem);
+  width: clamp(13rem, 50vw, 16rem);
+  height: clamp(28rem, 108vw, 34.5rem);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1040,6 +1043,20 @@ strong {
   min-width: 0;
   overflow-y: auto;
   overflow-wrap: break-word;
+  position: relative;
+}
+
+/* Indice statique (pas d'animation) qu'il reste du contenu à faire défiler,
+   collé au bas de l'écran visible pendant le défilement. */
+.apercu--interactif .apercu__contenu::after {
+  content: "";
+  display: block;
+  position: sticky;
+  bottom: 0;
+  height: 1.25rem;
+  margin-top: -1.25rem;
+  background: linear-gradient(to bottom, transparent, var(--color-bg-doux));
+  pointer-events: none;
 }
 
 #ecran-accueil:checked ~ #contenu-accueil,
