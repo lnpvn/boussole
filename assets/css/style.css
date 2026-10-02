@@ -960,6 +960,8 @@ strong {
 .section--demo-telephone {
   padding-top: clamp(0.75rem, 2.5vw, 1.5rem);
   background: none;
+  position: relative;
+  z-index: 1;
 }
 
 /* --- Démo interactive : mêmes onglets, changement d'écran en CSS pur (sans JavaScript) ---
