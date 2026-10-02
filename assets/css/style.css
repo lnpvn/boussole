@@ -70,6 +70,7 @@ body {
   line-height: 1.6;
   color: var(--color-text);
   background-color: var(--color-bg);
+  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -953,25 +954,13 @@ strong {
 }
 
 .hero--demo::before {
-  width: 40rem;
-  height: 40rem;
+  width: clamp(14rem, 85vw, 40rem);
+  height: clamp(14rem, 85vw, 40rem);
 }
 
 .hero--demo::after {
-  width: 24rem;
-  height: 24rem;
-}
-
-@media (max-width: 30rem) {
-  .hero--demo::before {
-    width: 24rem;
-    height: 24rem;
-  }
-
-  .hero--demo::after {
-    width: 14rem;
-    height: 14rem;
-  }
+  width: clamp(8rem, 50vw, 24rem);
+  height: clamp(8rem, 50vw, 24rem);
 }
 
 .section--demo-telephone {
@@ -1319,10 +1308,14 @@ strong {
 .pied nav ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.25rem;
+  gap: 0.25rem 0.75rem;
 }
 
 .pied a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding-block: 0.4rem;
   text-decoration: none;
   font-weight: 600;
 }
