@@ -4,26 +4,6 @@
 (function () {
   "use strict";
 
-  /* --- Bouton « Quitter le site » : remplace la page, sans retour arrière possible --- */
-  var boutonSortie = document.querySelectorAll("[data-quitter-site]");
-  var SITE_NEUTRE = "https://www.meteofrance.com";
-
-  function quitterLeSite() {
-    window.location.replace(SITE_NEUTRE);
-  }
-
-  boutonSortie.forEach(function (bouton) {
-    bouton.addEventListener("click", quitterLeSite);
-  });
-
-  if (boutonSortie.length > 0) {
-    document.addEventListener("keydown", function (evenement) {
-      if (evenement.key === "Escape") {
-        quitterLeSite();
-      }
-    });
-  }
-
   /* --- Formulaires en mode démonstration ---
      Aucune donnée n'est envoyée : l'AIPD et les documents juridiques ne sont
      pas encore faits. On valide le formulaire, puis on affiche un message

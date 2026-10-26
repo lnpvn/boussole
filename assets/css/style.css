@@ -33,12 +33,12 @@ img {
   --color-text-doux: #4C5A6B;
   --color-bg: #FFFFFF;
   --color-bg-doux: #EAF0F7;
-  --color-primaire: #1B2E4B;
-  --color-accent: #2F6B4B;
-  --color-cta: #C14A1E;
+  --color-primaire: #1E2A5E;
+  --color-accent: #8A5713;
+  --color-cta: #B8471F;
   --color-cta-texte: #FFFFFF;
   --color-bordure: #C9D6E3;
-  --color-focus: #1B2E4B;
+  --color-focus: #1E2A5E;
   --color-logo-soleil: #E8B45A;
   --rayon: 0.6rem;
   --rayon-grand: 1.25rem;
@@ -52,12 +52,12 @@ img {
     --color-text-doux: #B7C4D4;
     --color-bg: #10151C;
     --color-bg-doux: #16212F;
-    --color-primaire: #AFCBEC;
-    --color-accent: #8FD1AC;
-    --color-cta: #E07A48;
+    --color-primaire: #AFC2F2;
+    --color-accent: #E0A94A;
+    --color-cta: #E8865A;
     --color-cta-texte: #10151C;
     --color-bordure: #2B3A4A;
-    --color-focus: #AFCBEC;
+    --color-focus: #AFC2F2;
     --color-logo-soleil: #F2C572;
     --ombre: 0 10px 25px -8px rgba(0, 0, 0, 0.55);
   }
@@ -376,13 +376,6 @@ strong {
   border-color: var(--color-bordure);
 }
 
-.bouton--sortie {
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  border-color: var(--color-bordure);
-  font-size: 0.9rem;
-}
-
 /* --- 8. Cartes et grilles --- */
 .grille {
   display: grid;
@@ -696,17 +689,6 @@ strong {
   color: var(--color-text-doux);
   max-width: 40rem;
   margin-inline: auto;
-}
-
-/* --- Barre « Quitter le site » --- */
-.barre-sortie {
-  position: sticky;
-  top: 0;
-  z-index: 60;
-  background-color: var(--color-bg-doux);
-  border-bottom: 1px solid var(--color-bordure);
-  padding-block: 0.5rem;
-  text-align: right;
 }
 
 /* --- Aperçu de l'application (cadre téléphone en HTML/CSS, aucune image) --- */
@@ -1347,7 +1329,7 @@ strong {
 
 /* --- 12. Impression --- */
 @media print {
-  .entete, .pied, .nav-principale, .formulaire, .bouton--sortie, .barre-sortie {
+  .entete, .pied, .nav-principale, .formulaire {
     display: none !important;
   }
 
