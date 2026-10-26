@@ -576,6 +576,12 @@ strong {
   opacity: 0.2;
 }
 
+/* Le logo en couleurs sert déjà de décor : pas d'anneaux en plus derrière. */
+.hero--centree:has(.hero__boussole--logo)::before,
+.hero--centree:has(.hero__boussole--logo)::after {
+  display: none;
+}
+
 @media (max-width: 30rem) {
   .hero--centree::before {
     width: 18rem;
