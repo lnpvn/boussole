@@ -613,6 +613,22 @@ strong {
   pointer-events: none;
 }
 
+/* Variante en couleurs réelles du logo, utilisée en grand sur le hero
+   d'accueil : opacité plus marquée que le filigrane monochrome, mais
+   encore assez discrète pour ne pas gêner la lecture du texte posé
+   dessus (qui reste au-dessus grâce à .hero > .conteneur). */
+.hero__boussole--logo {
+  width: min(34rem, 100vw);
+  height: min(34rem, 100vw);
+  opacity: 0.22;
+}
+
+@media (prefers-color-scheme: dark) {
+  .hero__boussole--logo {
+    opacity: 0.3;
+  }
+}
+
 /* Sur un hero non centré (texte aligné à gauche), le motif se place
    en filigrane sur le côté droit plutôt qu'au centre du texte. */
 .hero:not(.hero--centree) .hero__boussole {

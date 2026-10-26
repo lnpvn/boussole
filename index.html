@@ -82,12 +82,34 @@
 
 <main id="contenu">
   <section class="section hero hero--centree">
-    <svg class="hero__boussole" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
-      <circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width="1.9" />
-      <polygon points="24,1 25.9,6.2 24,11.6 22.1,6.2" fill="currentColor" />
-      <polygon points="47,24 41.8,25.9 36.4,24 41.8,22.1" fill="currentColor" />
-      <polygon points="24,47 25.9,41.8 24,36.4 22.1,41.8" fill="currentColor" />
-      <polygon points="1,24 6.2,25.9 11.6,24 6.2,22.1" fill="currentColor" />
+    <svg class="hero__boussole hero__boussole--logo" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+      <defs>
+        <clipPath id="hero-disque"><circle cx="24" cy="24" r="16.3" /></clipPath>
+        <clipPath id="hero-ciel"><rect x="0" y="0" width="48" height="25" /></clipPath>
+      </defs>
+      <circle cx="24" cy="24" r="18" fill="none" stroke="#0D3B66" stroke-width="1.9" />
+      <g fill="#0D3B66">
+        <polygon points="24,1 25.9,6.2 24,11.6 22.1,6.2" />
+        <polygon points="47,24 41.8,25.9 36.4,24 41.8,22.1" />
+        <polygon points="24,47 25.9,41.8 24,36.4 22.1,41.8" />
+        <polygon points="1,24 6.2,25.9 11.6,24 6.2,22.1" />
+      </g>
+      <g clip-path="url(#hero-disque)">
+        <g clip-path="url(#hero-ciel)">
+          <circle cx="24.4" cy="22.5" r="6" fill="#F5C374" />
+        </g>
+        <g stroke="#F5C374" stroke-width="0.7" stroke-linecap="round">
+          <line x1="24.4" y1="15.4" x2="24.4" y2="13" />
+          <line x1="28.3" y1="16.6" x2="29.6" y2="14.6" />
+          <line x1="20.6" y1="16.6" x2="19.3" y2="14.6" />
+          <line x1="30.7" y1="19.3" x2="32.8" y2="18.2" />
+          <line x1="18.2" y1="19.3" x2="16" y2="18.2" />
+        </g>
+        <path fill="#7FAF8B" d="M5.1,19.9 C13.7,19.5 19.7,21.4 24,24.9 L23.1,25.4 C19.7,24.7 13.7,24.9 5.1,25.5 Z" />
+        <path fill="#0D3B66" d="M5.1,26.4 C13.7,25.7 19.7,25.5 22.5,25.9 C25.4,26.2 25.7,27.9 23.7,29.3 L12.9,36.9 L5.1,36.9 Z" />
+        <path fill="#5A9675" d="M24.2,24.9 C29.1,21.9 35.1,19.7 41.1,19.4 L41.1,44.6 L25.7,44.6 L25.7,40.5 C28.3,36.9 32.1,33.4 32.1,30.4 C32.1,27.4 27.4,25.7 24.3,25.5 Z" />
+        <path fill="#3D7656" d="M26.6,25.9 C33,25.5 38.6,26.4 41.1,28.5 L41.1,44.6 L25.7,44.6 L25.7,40.5 C28.3,36.9 32.1,33.4 32.1,30.4 C32.1,28.1 30,26.4 26.6,25.9 Z" />
+      </g>
     </svg>
     <div class="conteneur">
       <p class="badge">Gratuit, sans compte</p>
