@@ -771,12 +771,11 @@ strong {
   padding: 0.85rem;
 }
 
-/* Logo en filigrane derrière le contenu de l'écran simulé */
+/* Logo complet en filigrane derrière le contenu de l'écran simulé */
 .apercu__filigrane {
   position: absolute;
   inset: 12%;
-  color: var(--color-primaire);
-  opacity: 0.08;
+  opacity: 0.12;
   pointer-events: none;
 }
 
@@ -999,6 +998,7 @@ strong {
 .apercu__app {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
   margin-bottom: 0.9rem;
   font-weight: 800;
