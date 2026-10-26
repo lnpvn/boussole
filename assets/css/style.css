@@ -1068,16 +1068,16 @@ strong {
 }
 
 #ecran-accueil:checked ~ #contenu-accueil,
-#ecran-demarches:checked ~ #contenu-demarches,
-#ecran-partenaires:checked ~ #contenu-partenaires,
-#ecran-referent:checked ~ #contenu-referent {
+#ecran-pronote:checked ~ #contenu-pronote,
+#ecran-trouver:checked ~ #contenu-trouver,
+#ecran-comprendre:checked ~ #contenu-comprendre {
   display: block;
 }
 
 #ecran-accueil:checked ~ .apercu__onglet[for="ecran-accueil"],
-#ecran-demarches:checked ~ .apercu__onglet[for="ecran-demarches"],
-#ecran-partenaires:checked ~ .apercu__onglet[for="ecran-partenaires"],
-#ecran-referent:checked ~ .apercu__onglet[for="ecran-referent"] {
+#ecran-pronote:checked ~ .apercu__onglet[for="ecran-pronote"],
+#ecran-trouver:checked ~ .apercu__onglet[for="ecran-trouver"],
+#ecran-comprendre:checked ~ .apercu__onglet[for="ecran-comprendre"] {
   color: var(--color-accent);
 }
 
