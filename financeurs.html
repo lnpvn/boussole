@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Financeurs — Boussole</title>
+  <meta name="description" content="Boussole aide les familles à comprendre l'école et à utiliser Pronote et Parcoursup. Pilote prévisionnel en Seine-Saint-Denis, à partir de septembre 2027. Financement territorial et associatif recherché.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cdefs%3E%3CclipPath id='c'%3E%3Ccircle cx='24' cy='24' r='15'/%3E%3C/clipPath%3E%3C/defs%3E%3Ccircle cx='24' cy='24' r='17' fill='none' stroke='%231E2A5E' stroke-width='2.5'/%3E%3Cpolygon points='24,1 28,8 24,13 20,8' fill='%231E2A5E'/%3E%3Cpolygon points='47,24 40,20 35,24 40,28' fill='%231E2A5E'/%3E%3Cpolygon points='24,47 28,40 24,35 20,40' fill='%231E2A5E'/%3E%3Cpolygon points='1,24 8,28 13,24 8,20' fill='%231E2A5E'/%3E%3Cg clip-path='url(%23c)'%3E%3Ccircle cx='24' cy='18' r='4.3' fill='%23E8B45A'/%3E%3Cg stroke='%23E8B45A' stroke-width='1.5' stroke-linecap='round'%3E%3Cline x1='19.2' y1='14.3' x2='17.1' y2='13'/%3E%3Cline x1='21.3' y1='12.2' x2='20' y2='10.1'/%3E%3Cline x1='24' y1='11.5' x2='24' y2='9'/%3E%3Cline x1='26.8' y1='12.2' x2='28' y2='10.1'/%3E%3Cline x1='28.8' y1='14.3' x2='30.9' y2='13'/%3E%3C/g%3E%3Cpath d='M6,40 Q14,21 24,26 L24,40 Z' fill='%238A5713' fill-opacity='0.55'/%3E%3Cpath d='M24,40 L24,26 Q34,21 42,40 Z' fill='%238A5713'/%3E%3Cpath d='M21,26 Q15,32 20,36 Q23,39 18,43 L29,43 Q24,39 27,36 Q32,32 26,26 Q24,28.5 21,26 Z' fill='%231E2A5E'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+
+<header class="entete">
+  <div class="conteneur entete__interieur">
+    <a class="logo" href="index.html">
+      <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+        <defs>
+          <clipPath id="boussole-cadre"><circle cx="24" cy="24" r="15" /></clipPath>
+        </defs>
+        <circle cx="24" cy="24" r="17" fill="none" stroke="var(--color-primaire)" stroke-width="2.5" />
+        <polygon points="24,1 28,8 24,13 20,8" fill="var(--color-primaire)" />
+        <polygon points="47,24 40,20 35,24 40,28" fill="var(--color-primaire)" />
+        <polygon points="24,47 28,40 24,35 20,40" fill="var(--color-primaire)" />
+        <polygon points="1,24 8,28 13,24 8,20" fill="var(--color-primaire)" />
+        <g clip-path="url(#boussole-cadre)">
+          <circle cx="24" cy="18" r="4.3" fill="var(--color-logo-soleil)" />
+          <g stroke="var(--color-logo-soleil)" stroke-width="1.5" stroke-linecap="round">
+            <line x1="19.2" y1="14.3" x2="17.1" y2="13" />
+            <line x1="21.3" y1="12.2" x2="20" y2="10.1" />
+            <line x1="24" y1="11.5" x2="24" y2="9" />
+            <line x1="26.8" y1="12.2" x2="28" y2="10.1" />
+            <line x1="28.8" y1="14.3" x2="30.9" y2="13" />
+          </g>
+          <path d="M6,40 Q14,21 24,26 L24,40 Z" fill="var(--color-accent)" fill-opacity="0.55" />
+          <path d="M24,40 L24,26 Q34,21 42,40 Z" fill="var(--color-accent)" />
+          <path d="M21,26 Q15,32 20,36 Q23,39 18,43 L29,43 Q24,39 27,36 Q32,32 26,26 Q24,28.5 21,26 Z" fill="var(--color-primaire)" />
+        </g>
+      </svg>
+      <span>Boussole</span>
+    </a>
+    <div class="entete__droite">
+      <nav class="nav-principale" aria-label="Navigation principale">
+        <ul>
+          <li><a href="parents.html">Parents</a></li>
+          <li><a href="financeurs.html" aria-current="page">Financeurs</a></li>
+          <li><a href="partenaires.html">Partenaires</a></li>
+        </ul>
+      </nav>
+      <!-- Sélecteur de langue : démonstration uniquement. Il montre l'intention de
+           traduire le site plus tard, mais ne traduit rien pour l'instant : seule
+           l'application Boussole sera réellement multilingue dès son lancement. -->
+      <details class="selecteur-langue">
+        <summary class="selecteur-langue__bouton">
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" width="18" height="18">
+            <circle cx="10" cy="10" r="8" fill="none" stroke="currentColor" stroke-width="1.5" />
+            <path d="M2 10h16M10 2c2.5 2.5 2.5 13 0 16M10 2c-2.5 2.5-2.5 13 0 16" fill="none" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+          <span>Français</span>
+        </summary>
+        <div class="selecteur-langue__panneau">
+          <ul class="selecteur-langue__liste">
+            <li><strong>Français</strong><span class="badge">Langue actuelle</span></li>
+            <li>English — anglais<span class="badge">Bientôt</span></li>
+            <li>العربية — arabe maghrébin<span class="badge">Bientôt</span></li>
+            <li>Bamanankan — bambara<span class="badge">Bientôt</span></li>
+            <li>Português — portugais<span class="badge">Bientôt</span></li>
+            <li>Türkçe — turc<span class="badge">Bientôt</span></li>
+          </ul>
+          <p class="selecteur-langue__note">Démonstration : la traduction du site n'est pas encore activée. L'application Boussole, elle, sera disponible en plusieurs langues dès son lancement.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>
+
+<main id="contenu">
+  <section class="section hero">
+    <div class="conteneur">
+      <p class="badge">Projet associatif en préparation</p>
+      <h1>Les dispositifs existent. Beaucoup de familles ne savent pas s'en servir.</h1>
+      <p>Boussole est un guide numérique gratuit qui aide les parents à comprendre l'école, à ne pas rater les échéances, et à se servir de Pronote et de Parcoursup.</p>
+      <div class="hero__actions">
+        <a class="bouton bouton--principal" href="?type=dossier#formulaire">Recevoir le dossier de présentation</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Le constat</h2>
+      </div>
+      <ul class="liste-points">
+        <li>Les informations utiles aux familles sont dispersées entre l'école, la mairie, la CAF et les associations. <!-- [chiffre à sourcer] --></li>
+        <li>Les démarches administratives restent complexes, en particulier pour les familles peu familières du système scolaire français. <!-- [chiffre à sourcer] --></li>
+        <li>La barrière de la langue freine la compréhension des courriers et des démarches. <!-- [chiffre à sourcer] --></li>
+        <li>Les outils numériques comme Pronote et Parcoursup sont souvent mal maîtrisés par les parents. <!-- [chiffre à sourcer] --></li>
+      </ul>
+      <p>[chiffre à sourcer] : nous complèterons cette section avec des données de cadrage, une fois sourcées.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>La solution</h2>
+      </div>
+      <ul class="grille">
+        <li class="carte">
+          <h3>Comprendre</h3>
+          <p>Un lexique de l'école, dans la langue du parent.</p>
+        </li>
+        <li class="carte">
+          <h3>Anticiper</h3>
+          <p>Un calendrier des échéances scolaires, avec rappels.</p>
+        </li>
+        <li class="carte">
+          <h3>Se servir de Pronote et de Parcoursup</h3>
+          <p>Des tutoriels courts pour les deux outils.</p>
+        </li>
+        <li class="carte">
+          <h3>Trouver</h3>
+          <p>Un annuaire vérifié des services du territoire.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Pourquoi c'est un bon investissement</h2>
+      </div>
+      <ul class="liste-points">
+        <li>Pas de poste à financer pour un suivi individuel des familles.</li>
+        <li>Pas de doublon avec Pronote, ni avec les associations déjà présentes sur le territoire.</li>
+        <li>Une diffusion par des structures déjà en contact avec les familles, sans nouveau circuit à créer.</li>
+        <li>Une seule application web légère, sans coût de maintenance d'applications mobiles.</li>
+        <li>Six langues dès le départ : français, anglais, portugais, arabe maghrébin, bambara et turc.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>La chaîne d'impact</h2>
+        <p>La réussite scolaire est un effet de long terme, auquel Boussole contribue sans pouvoir se l'attribuer seul.</p>
+      </div>
+      <ol class="etapes">
+        <li class="etapes__item">
+          <span class="etapes__numero">1</span>
+          <div>
+            <h3>Portée</h3>
+            <p>Des familles touchées grâce à la diffusion par les structures de proximité et les parents relais.</p>
+          </div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">2</span>
+          <div>
+            <h3>Usage</h3>
+            <p>Des familles qui utilisent Boussole régulièrement.</p>
+          </div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">3</span>
+          <div>
+            <h3>Autonomie</h3>
+            <p>Trouver l'information sans aide, identifier le bon interlocuteur, faire la démarche.</p>
+          </div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">4</span>
+          <div>
+            <h3>Compréhension et prise en main de Pronote</h3>
+            <p>Mieux comprendre le fonctionnement de l'école et se servir des outils numériques.</p>
+          </div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">5</span>
+          <div>
+            <h3>Lien avec l'école</h3>
+            <p>Un dialogue plus simple entre les familles et l'établissement.</p>
+          </div>
+        </li>
+        <li class="etapes__item etapes__item--cle">
+          <span class="etapes__numero">6</span>
+          <div>
+            <h3>Réussite scolaire (effet de long terme)</h3>
+            <p>Assiduité, passage en 6e, orientation, brevet, vœux Parcoursup confirmés dans les délais. Boussole y contribue, sans pouvoir se l'attribuer seul.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Le pilote</h2>
+        <p><strong>Objectifs prévisionnels</strong> : rien n'est encore obtenu.</p>
+      </div>
+      <ul class="grille">
+        <li class="carte">
+          <h3>Un territoire</h3>
+          <p>Une commune de Seine-Saint-Denis, à choisir.</p>
+        </li>
+        <li class="carte">
+          <h3>Trois établissements</h3>
+          <p>Un collège en éducation prioritaire, une école primaire de son secteur et le lycée où la plupart de ses élèves poursuivent leurs études.</p>
+        </li>
+        <li class="carte">
+          <h3>Environ 80 familles</h3>
+          <p>30 à l'école primaire, 30 au collège, 20 au lycée.</p>
+        </li>
+      </ul>
+      <ol class="etapes">
+        <li class="etapes__item">
+          <span class="etapes__numero">1</span>
+          <div><h3>Cadrage</h3><p>D'octobre 2026 à janvier 2027.</p></div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">2</span>
+          <div><h3>Maquette</h3><p>Février et mars 2027.</p></div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">3</span>
+          <div><h3>Test</h3><p>Avec une dizaine de familles, d'avril à juin 2027.</p></div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">4</span>
+          <div><h3>Pilote</h3><p>De septembre 2027 à juillet 2028.</p></div>
+        </li>
+        <li class="etapes__item">
+          <span class="etapes__numero">5</span>
+          <div><h3>Bilan</h3><p>Juillet 2028.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Notre modèle</h2>
+        <p>B2C dans l'usage, B2B2C dans le financement. Ce modèle reste à confirmer.</p>
+      </div>
+      <div class="schema">
+        <div class="schema__noeud">
+          <p><strong>Parents</strong></p>
+          <p>Utilisent Boussole gratuitement</p>
+        </div>
+        <span class="schema__fleche" aria-hidden="true">→</span>
+        <div class="schema__noeud">
+          <p><strong>Collectivités, CAF, fondations</strong></p>
+          <p>Financent le service</p>
+        </div>
+        <span class="schema__fleche" aria-hidden="true">→</span>
+        <div class="schema__noeud">
+          <p><strong>Structures de proximité</strong></p>
+          <p>Diffusent auprès des familles</p>
+        </div>
+      </div>
+      <p class="schema__legende">Comme les financeurs sont surtout publics, on parle aussi de B2G2C (« business to government to consumer ») : une structure propose un service à un acteur public, qui le finance et le met gratuitement à disposition des habitants. Le budget est en cours de chiffrage.</p>
+    </div>
+  </section>
+
+  <section class="section section--douce">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Comment nous soutenir</h2>
+      </div>
+      <ul class="grille">
+        <li class="carte">
+          <h3>Financement territorial</h3>
+          <p>Un partenariat avec une commune, une intercommunalité ou une Cité éducative.</p>
+        </li>
+        <li class="carte">
+          <h3>Appels à projets parentalité</h3>
+          <p>Boussole peut candidater aux dispositifs existants, avec votre soutien.</p>
+        </li>
+        <li class="carte">
+          <h3>Fondations</h3>
+          <p>Un financement pour accompagner le pilote et son évaluation.</p>
+        </li>
+        <li class="carte">
+          <h3>Mécénat financier ou de compétences</h3>
+          <p>Un soutien financier, ou l'apport de compétences de votre entreprise.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" id="formulaire">
+    <div class="conteneur">
+      <div class="section__entete">
+        <h2>Recevoir le dossier de présentation</h2>
+        <p>Laissez vos coordonnées : nous reviendrons vers vous pour échanger sur le pilote.</p>
+      </div>
+
+      <!-- Formulaire en mode démonstration : le site est un prototype, aucune donnée
+           n'est envoyée ni stockée tant que l'analyse d'impact (AIPD) et les documents
+           juridiques ne sont pas finalisés. Voir assets/js/main.js pour brancher un
+           envoi réel plus tard. -->
+      <form class="formulaire" data-formulaire-demo novalidate>
+        <div class="champ">
+          <label for="fin-nom">Nom</label>
+          <input type="text" id="fin-nom" name="nom" autocomplete="name" required>
+        </div>
+        <div class="champ">
+          <label for="fin-organisation">Organisation</label>
+          <input type="text" id="fin-organisation" name="organisation" autocomplete="organization" required>
+        </div>
+        <div class="champ">
+          <label for="fin-type">Type de financeur</label>
+          <select id="fin-type" name="type-financeur" required>
+            <option value="" selected disabled>Choisissez un type de financeur</option>
+            <option value="dossier">Recevoir le dossier de présentation</option>
+            <option value="commune">Commune ou intercommunalité</option>
+            <option value="caf">CAF</option>
+            <option value="cite-educative">Cité éducative</option>
+            <option value="fondation">Fondation</option>
+            <option value="mecene">Mécène d'entreprise</option>
+            <option value="autre">Autre</option>
+          </select>
+        </div>
+        <div class="champ">
+          <label for="fin-email">E-mail</label>
+          <input type="email" id="fin-email" name="email" autocomplete="email" required>
+        </div>
+        <div class="champ">
+          <label for="fin-message">Message (facultatif)</label>
+          <textarea id="fin-message" name="message"></textarea>
+        </div>
+        <div class="champ champ--case">
+          <input type="checkbox" id="fin-consentement" name="consentement" required>
+          <label for="fin-consentement">J'accepte que Boussole utilise mes coordonnées pour répondre à ma demande.</label>
+        </div>
+        <button type="submit" class="bouton bouton--principal">Recevoir le dossier de présentation</button>
+        <p>En savoir plus : <a href="confidentialite.html">notre politique de confidentialité</a>.</p>
+      </form>
+      <div class="formulaire__confirmation" data-formulaire-confirmation hidden tabindex="-1" role="status">
+        <p>Merci ! Votre message est bien enregistré. Nous reviendrons vers vous pour échanger sur le pilote.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="conteneur pied__interieur">
+    <div class="pied__bloc">
+      <p>Boussole — Votre repère pour comprendre l'école.</p>
+      <nav aria-label="Pied de page">
+        <ul>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="mailto:[À COMPLÉTER]">Contact</a></li> <!-- À COMPLÉTER : adresse e-mail officielle de l'association -->
+        </ul>
+      </nav>
+    </div>
+    <div class="pied__soutenir">
+      <p>Vous êtes une structure de terrain ?</p>
+      <a class="bouton bouton--secondaire" href="partenaires.html">Devenir partenaire</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

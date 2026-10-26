@@ -37,9 +37,10 @@
 
   /* --- Présélection du type de soutien depuis le lien cliqué ---
      Un bouton peut pointer vers "?type=dossier#formulaire" pour présélectionner
-     une option du formulaire "Soutenir le pilote". Sans JavaScript, le visiteur
-     arrive simplement sur le formulaire sans présélection : rien n'est cassé. */
-  var selectTypeSoutien = document.querySelector("#sout-type");
+     une option du formulaire de la page "Financeurs". Sans JavaScript, le
+     visiteur arrive simplement sur le formulaire sans présélection : rien
+     n'est cassé. */
+  var selectTypeSoutien = document.querySelector("#fin-type");
 
   if (selectTypeSoutien) {
     var typeDemande = new URLSearchParams(window.location.search).get("type");
