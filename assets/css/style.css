@@ -1046,8 +1046,8 @@ strong {
 }
 
 .livret__page--couverture {
-  background-color: var(--color-primaire);
-  color: var(--color-bg);
+  background-color: var(--color-bg-doux);
+  color: var(--color-primaire);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1059,7 +1059,6 @@ strong {
 .livret__logo {
   width: 3.5rem;
   height: 3.5rem;
-  color: var(--color-bg);
 }
 
 .livret__titre {
