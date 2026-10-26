@@ -33,12 +33,12 @@ img {
   --color-text-doux: #4C5A6B;
   --color-bg: #FFFFFF;
   --color-bg-doux: #EAF0F7;
-  --color-primaire: #1E2A5E;
-  --color-accent: #8A5713;
-  --color-cta: #B8471F;
+  --color-primaire: #1B2E4B;
+  --color-accent: #2F6B4B;
+  --color-cta: #C14A1E;
   --color-cta-texte: #FFFFFF;
   --color-bordure: #C9D6E3;
-  --color-focus: #1E2A5E;
+  --color-focus: #1B2E4B;
   --color-logo-soleil: #E8B45A;
   --rayon: 0.6rem;
   --rayon-grand: 1.25rem;
@@ -52,12 +52,12 @@ img {
     --color-text-doux: #B7C4D4;
     --color-bg: #10151C;
     --color-bg-doux: #16212F;
-    --color-primaire: #AFC2F2;
-    --color-accent: #E0A94A;
-    --color-cta: #E8865A;
+    --color-primaire: #AFCBEC;
+    --color-accent: #8FD1AC;
+    --color-cta: #E07A48;
     --color-cta-texte: #10151C;
     --color-bordure: #2B3A4A;
-    --color-focus: #AFC2F2;
+    --color-focus: #AFCBEC;
     --color-logo-soleil: #F2C572;
     --ombre: 0 10px 25px -8px rgba(0, 0, 0, 0.55);
   }
@@ -596,7 +596,8 @@ strong {
   margin-top: 1.5rem;
 }
 
-/* --- Motif boussole décoratif, dans les sections hero --- */
+/* --- Motif boussole décoratif, dans les sections hero ---
+   Reprend le vrai logo (anneau et flèches), en une seule couleur. */
 .hero__boussole {
   position: absolute;
   top: 50%;
@@ -605,7 +606,8 @@ strong {
   z-index: 0;
   width: min(26rem, 90vw);
   height: min(26rem, 90vw);
-  opacity: 0.8;
+  color: var(--color-primaire);
+  opacity: 0.12;
   pointer-events: none;
 }
 
@@ -622,7 +624,7 @@ strong {
 
 /* LP financeurs : ton plus sobre, motif plus discret. */
 .hero--sobre .hero__boussole {
-  opacity: 0.35;
+  opacity: 0.06;
 }
 
 @media (max-width: 30rem) {
@@ -739,9 +741,29 @@ strong {
 }
 
 .apercu__ecran {
+  position: relative;
   background-color: var(--color-bg-doux);
   border-radius: 1.6rem;
   padding: 0.85rem;
+}
+
+/* Logo en filigrane derrière le contenu de l'écran simulé */
+.apercu__filigrane {
+  position: absolute;
+  inset: 12%;
+  color: var(--color-primaire);
+  opacity: 0.08;
+  pointer-events: none;
+}
+
+.apercu__ecran > *:not(.apercu__filigrane) {
+  position: relative;
+  z-index: 1;
+}
+
+.apercu--interactif .apercu__filigrane {
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
 }
 
 /* Barre d'état (purement décorative) */
