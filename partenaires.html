@@ -200,7 +200,53 @@
           <p>Un accès direct à Boussole, sans rien installer.</p>
         </li>
       </ul>
-      <!-- À COMPLÉTER : aperçus visuels du livret et de l'affiche, une fois la maquette prête -->
+      <div class="livret" aria-hidden="true">
+        <div class="livret__page livret__page--couverture">
+          <svg class="livret__logo" viewBox="0 0 48 48" focusable="false">
+            <defs>
+              <clipPath id="boussole-cadre-livret"><circle cx="24" cy="24" r="15" /></clipPath>
+            </defs>
+            <circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="2.5" />
+            <polygon points="24,1 28,8 24,13 20,8" fill="currentColor" />
+            <polygon points="47,24 40,20 35,24 40,28" fill="currentColor" />
+            <polygon points="24,47 28,40 24,35 20,40" fill="currentColor" />
+            <polygon points="1,24 8,28 13,24 8,20" fill="currentColor" />
+            <g clip-path="url(#boussole-cadre-livret)">
+              <circle cx="24" cy="18" r="4.3" fill="var(--color-logo-soleil)" />
+              <path d="M6,40 Q14,21 24,26 L24,40 Z" fill="currentColor" fill-opacity="0.55" />
+              <path d="M24,40 L24,26 Q34,21 42,40 Z" fill="currentColor" />
+              <path d="M21,26 Q15,32 20,36 Q23,39 18,43 L29,43 Q24,39 27,36 Q32,32 26,26 Q24,28.5 21,26 Z" fill="currentColor" />
+            </g>
+          </svg>
+          <p class="livret__titre">Boussole</p>
+          <p class="livret__accroche">Comprendre l'école, dans votre langue</p>
+        </div>
+        <div class="livret__page livret__page--interieur">
+          <ul class="livret__piliers">
+            <li><span class="livret__puce"></span>Comprendre</li>
+            <li><span class="livret__puce"></span>Anticiper</li>
+            <li><span class="livret__puce"></span>Pronote et Parcoursup</li>
+            <li><span class="livret__puce"></span>Trouver</li>
+          </ul>
+          <svg class="livret__qr" viewBox="0 0 7 7" focusable="false">
+            <rect x="0" y="0" width="3" height="3" fill="none" stroke="currentColor" stroke-width="0.6" />
+            <rect x="1" y="1" width="1" height="1" fill="currentColor" />
+            <rect x="4" y="0" width="3" height="3" fill="none" stroke="currentColor" stroke-width="0.6" />
+            <rect x="5" y="1" width="1" height="1" fill="currentColor" />
+            <rect x="0" y="4" width="3" height="3" fill="none" stroke="currentColor" stroke-width="0.6" />
+            <rect x="1" y="5" width="1" height="1" fill="currentColor" />
+            <rect x="4" y="4" width="1" height="1" fill="currentColor" />
+            <rect x="6" y="4" width="1" height="1" fill="currentColor" />
+            <rect x="5" y="5" width="1" height="1" fill="currentColor" />
+            <rect x="4" y="6" width="1" height="1" fill="currentColor" />
+            <rect x="6" y="6" width="1" height="1" fill="currentColor" />
+            <rect x="3" y="3" width="1" height="1" fill="currentColor" />
+          </svg>
+          <p class="livret__qr-legende">Scannez pour accéder à Boussole</p>
+        </div>
+      </div>
+      <p class="sr-only">Aperçu du livret partenaire : une couverture avec le logo Boussole et l'accroche « Comprendre l'école, dans votre langue », et une page intérieure présentant les quatre piliers (Comprendre, Anticiper, Pronote et Parcoursup, Trouver) avec un QR code d'accès.</p>
+      <!-- À COMPLÉTER : remplacer ce QR code décoratif par le vrai, une fois l'adresse définitive du site connue -->
     </div>
   </section>
 

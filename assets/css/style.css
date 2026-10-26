@@ -584,6 +584,24 @@ strong {
   margin-top: 1.5rem;
 }
 
+/* --- Motif boussole décoratif, centré derrière le texte du hero d'accueil --- */
+.hero__boussole {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  width: min(26rem, 90vw);
+  height: min(26rem, 90vw);
+  pointer-events: none;
+}
+
+@media (max-width: 30rem) {
+  .hero__boussole {
+    display: none;
+  }
+}
+
 /* --- Page d'erreur 404 --- */
 .page-erreur {
   text-align: center;
@@ -917,6 +935,102 @@ strong {
   width: 1rem;
   height: 1rem;
   flex-shrink: 0;
+}
+
+/* --- Aperçu du livret partenaire : couverture + page intérieure, en HTML/CSS --- */
+.livret {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.livret__page {
+  flex: 1 1 14rem;
+  min-height: 19rem;
+  border: 1px solid var(--color-bordure);
+  border-radius: var(--rayon-grand);
+  box-shadow: var(--ombre);
+  padding: 1.75rem;
+}
+
+.livret__page--couverture {
+  background-color: var(--color-primaire);
+  color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.livret__logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  color: var(--color-bg);
+}
+
+.livret__titre {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.livret__accroche {
+  margin: 0;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.livret__page--interieur {
+  background-color: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.livret__piliers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+  color: var(--color-primaire);
+}
+
+.livret__piliers li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.livret__puce {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.livret__qr {
+  width: 5rem;
+  height: 5rem;
+  margin-top: auto;
+  color: var(--color-primaire);
+}
+
+.livret__qr-legende {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+  color: var(--color-text-doux);
+}
+
+/* --- Galerie de plusieurs maquettes de téléphone côte à côte --- */
+.galerie-apercus > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* --- Démo interactive : rapproche le téléphone du texte d'introduction ---
