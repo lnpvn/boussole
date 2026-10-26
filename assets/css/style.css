@@ -992,62 +992,32 @@ strong {
   margin-bottom: 0.5rem;
 }
 
-/* Petit logo Boussole affiché en haut de l'écran simulé, au-dessus du contenu */
+/* Logo Boussole affiché en haut de l'écran simulé, au-dessus du contenu.
+   Volontairement mis en valeur (grand, ombre portée douce) plutôt que
+   réduit à une petite icône dans un bandeau coloré : plus proche d'une
+   interface d'app moderne, où la marque signe l'écran sans l'encombrer. */
 .apercu__app {
   display: flex;
   align-items: center;
-  gap: 0.3rem;
-  margin-bottom: 0.6rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--color-bordure);
-  font-weight: 700;
-  font-size: 0.75rem;
+  gap: 0.5rem;
+  margin-bottom: 0.9rem;
+  font-weight: 800;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
   color: var(--color-primaire);
 }
 
-/* --- Bandeau coloré en haut de l'écran simulé (barre d'état + logo) ---
-   Les négatives compensent le padding de .apercu__ecran pour que le
-   dégradé touche les bords du téléphone, jusqu'aux coins arrondis. */
+/* Conteneur neutre pour la barre d'état et le logo : plus de fond
+   coloré, juste un peu d'air au-dessus du contenu de l'écran. */
 .apercu__bandeau {
-  background: linear-gradient(135deg, var(--color-primaire), color-mix(in srgb, var(--color-primaire) 55%, var(--color-accent)));
-  margin: -0.85rem -0.85rem 0.7rem;
-  padding: 0.65rem 0.85rem 0.9rem;
-  border-radius: 1.6rem 1.6rem 1rem 1rem;
-}
-
-.apercu__bandeau .apercu__barre-etat {
-  color: var(--color-bg);
-}
-
-.apercu__bandeau .apercu__signal span,
-.apercu__bandeau .apercu__batterie span {
-  background-color: var(--color-bg);
-}
-
-.apercu__bandeau .apercu__batterie {
-  border-color: var(--color-bg);
-}
-
-.apercu__bandeau .apercu__app {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-  color: var(--color-bg);
-}
-
-.apercu__bandeau .apercu__app svg [fill="var(--color-primaire)"],
-.apercu__bandeau .apercu__app svg [fill="var(--color-accent)"] {
-  fill: var(--color-bg);
-}
-
-.apercu__bandeau .apercu__app svg [stroke="var(--color-primaire)"] {
-  stroke: var(--color-bg);
+  margin-bottom: 0.3rem;
 }
 
 .apercu__app svg {
-  width: 1rem;
-  height: 1rem;
+  width: 1.9rem;
+  height: 1.9rem;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 5px color-mix(in srgb, var(--color-primaire) 35%, transparent));
 }
 
 /* --- Aperçu du livret partenaire : couverture + page intérieure, en HTML/CSS --- */
