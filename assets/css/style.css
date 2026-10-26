@@ -351,13 +351,14 @@ strong {
 }
 
 .bouton--principal {
-  background-color: var(--color-cta);
+  background: linear-gradient(135deg, var(--color-cta), color-mix(in srgb, var(--color-cta) 72%, black));
   color: var(--color-cta-texte);
+  box-shadow: 0 6px 16px -6px color-mix(in srgb, var(--color-cta) 55%, transparent);
 }
 
 .bouton--principal:hover {
   transform: translateY(-2px);
-  box-shadow: var(--ombre);
+  box-shadow: 0 12px 24px -8px color-mix(in srgb, var(--color-cta) 60%, transparent);
 }
 
 .bouton--secondaire {
@@ -368,6 +369,7 @@ strong {
 
 .bouton--secondaire:hover {
   background-color: var(--color-bg-doux);
+  transform: translateY(-2px);
 }
 
 .bouton--discret {
@@ -398,9 +400,17 @@ strong {
 .carte {
   background-color: var(--color-bg);
   border: 1px solid var(--color-bordure);
+  border-top: 3px solid transparent;
   border-radius: var(--rayon-grand);
   box-shadow: var(--ombre);
   padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-top-color 0.2s ease;
+}
+
+.carte:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 34px -14px rgba(15, 23, 42, 0.3);
+  border-top-color: var(--color-accent);
 }
 
 .section--douce .carte {
@@ -416,12 +426,13 @@ strong {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3.25rem;
-  height: 3.25rem;
+  width: 3.5rem;
+  height: 3.5rem;
   margin-bottom: 1rem;
   border-radius: 50%;
-  background-color: var(--color-bg-doux);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 22%, var(--color-bg)), color-mix(in srgb, var(--color-accent) 8%, var(--color-bg)));
   color: var(--color-accent);
+  box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--color-accent) 40%, transparent);
 }
 
 .icone-engagement svg {
@@ -433,7 +444,7 @@ strong {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  background-color: var(--color-bg-doux);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--color-accent) 16%, var(--color-bg)), color-mix(in srgb, var(--color-accent) 6%, var(--color-bg)));
   color: var(--color-accent);
   border: 1px solid var(--color-bordure);
   border-radius: var(--rayon-pilule);
@@ -464,6 +475,7 @@ strong {
 .hero {
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, color-mix(in srgb, var(--color-primaire) 5%, var(--color-bg)), var(--color-bg) 65%);
 }
 
 .hero::before,
@@ -471,7 +483,7 @@ strong {
   content: "";
   position: absolute;
   border-radius: 50%;
-  border: 2.5rem solid var(--color-bg-doux);
+  border: 2.5rem solid color-mix(in srgb, var(--color-accent) 12%, var(--color-bg-doux));
   z-index: 0;
 }
 
@@ -584,7 +596,7 @@ strong {
   margin-top: 1.5rem;
 }
 
-/* --- Motif boussole décoratif, centré derrière le texte du hero d'accueil --- */
+/* --- Motif boussole décoratif, dans les sections hero --- */
 .hero__boussole {
   position: absolute;
   top: 50%;
@@ -593,7 +605,24 @@ strong {
   z-index: 0;
   width: min(26rem, 90vw);
   height: min(26rem, 90vw);
+  opacity: 0.8;
   pointer-events: none;
+}
+
+/* Sur un hero non centré (texte aligné à gauche), le motif se place
+   en filigrane sur le côté droit plutôt qu'au centre du texte. */
+.hero:not(.hero--centree) .hero__boussole {
+  top: 50%;
+  left: auto;
+  right: -5rem;
+  transform: translateY(-50%);
+  width: min(20rem, 70vw);
+  height: min(20rem, 70vw);
+}
+
+/* LP financeurs : ton plus sobre, motif plus discret. */
+.hero--sobre .hero__boussole {
+  opacity: 0.35;
 }
 
 @media (max-width: 30rem) {
@@ -625,6 +654,7 @@ strong {
 .schema__noeud {
   background-color: var(--color-bg);
   border: 1px solid var(--color-bordure);
+  border-top: 3px solid var(--color-accent);
   border-radius: var(--rayon-grand);
   box-shadow: var(--ombre);
   padding: 1.5rem 1.25rem;
@@ -671,35 +701,6 @@ strong {
   .schema__fleche {
     transform: rotate(90deg);
   }
-}
-
-/* --- Accroche (citation mise en avant après une grille de cartes) --- */
-.accroche {
-  position: relative;
-  max-width: 34rem;
-  margin: 2.5rem auto 0;
-  padding: 0.5rem 2rem 2rem;
-  border-radius: var(--rayon-grand);
-  background-color: var(--color-bg);
-  box-shadow: var(--ombre);
-  text-align: center;
-}
-
-.accroche::before {
-  content: "“";
-  display: block;
-  font-size: 3.5rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--color-accent);
-}
-
-.accroche p {
-  margin: 0;
-  font-size: 1.25rem;
-  font-style: italic;
-  font-weight: 700;
-  color: var(--color-primaire);
 }
 
 .schema__legende {
@@ -1316,6 +1317,12 @@ strong {
   border-radius: var(--rayon-grand);
   box-shadow: var(--ombre);
   padding: 1.25rem 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.etapes__item:hover {
+  transform: translateX(4px);
+  box-shadow: 0 14px 28px -14px rgba(15, 23, 42, 0.28);
 }
 
 .etapes__numero {
@@ -1326,9 +1333,10 @@ strong {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  background-color: var(--color-primaire);
+  background: linear-gradient(135deg, var(--color-primaire), color-mix(in srgb, var(--color-primaire) 60%, var(--color-accent)));
   color: var(--color-bg);
   font-weight: 700;
+  box-shadow: 0 4px 10px -4px color-mix(in srgb, var(--color-primaire) 50%, transparent);
 }
 
 .etapes__item h3 {
@@ -1346,7 +1354,7 @@ strong {
 }
 
 .etapes__item--cle .etapes__numero {
-  background-color: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-cta));
 }
 
 /* --- Barres de répartition (budget) --- */
@@ -1450,13 +1458,14 @@ strong {
   font: inherit;
   color: var(--color-text);
   background-color: var(--color-bg);
-  transition: border-color 0.15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .champ input:focus,
 .champ select:focus,
 .champ textarea:focus {
   border-color: var(--color-primaire);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--color-primaire) 15%, transparent);
 }
 
 .champ textarea {
@@ -1491,7 +1500,8 @@ strong {
 
 /* --- 10. Pied de page --- */
 .pied {
-  border-top: 3px solid var(--color-accent);
+  border-top: 4px solid transparent;
+  border-image: linear-gradient(90deg, var(--color-accent), var(--color-cta), var(--color-primaire)) 1;
   background-color: var(--color-bg-doux);
 }
 
