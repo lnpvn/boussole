@@ -40,6 +40,7 @@ img {
   --color-bordure: #C9D6E3;
   --color-focus: #1B2E4B;
   --color-logo-soleil: #E8B45A;
+  --color-accent-clair: #7DA88C;
   --rayon: 0.6rem;
   --rayon-grand: 1.25rem;
   --rayon-pilule: 999px;
@@ -59,6 +60,7 @@ img {
     --color-bordure: #2B3A4A;
     --color-focus: #AFCBEC;
     --color-logo-soleil: #F2C572;
+    --color-accent-clair: #9BC2A8;
     --ombre: 0 10px 25px -8px rgba(0, 0, 0, 0.55);
   }
 }
